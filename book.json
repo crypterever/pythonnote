@@ -1,0 +1,78 @@
+{
+    "root": ".",
+    "title": "我的python笔记本",
+    "author": "Winnerzr",
+    "description": "Winnerzr's python notebook",
+    "language": "zh-hans",
+    "plugins": [
+        "donate",
+        "tbfed-pagefooter",
+        "expandable-chapters-small",
+        "github",
+        "github-buttons",
+        "anchor-navigation-ex",
+        "edit-link",
+        "splitter",
+        "favicon",
+        "mygitalk",
+        "code"
+    ],
+    "pluginsConfig": {
+        "donate": {
+            "wechat": "https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif",
+            "alipay": "https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif",
+            "title": "",
+            "button": "Donate",
+            "alipayText": "支付宝",
+            "wechatText": "微信"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"&copy by Winnerzr",
+            "modify_label": "该文档修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "github": {
+            "url": "https://github.com/WINNERZR01"
+        },  
+        "expandable-chapters":{},
+        "anchor-navigation-ex":{
+            "showLevel": false
+        },
+        "edit-link": {
+            "base": "https://github.com/WINNERZR01/pythonnote/blob/master",
+            "label": ""
+        },
+        "code": {
+            "copyButtons": true
+        },
+        "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico",
+            "appleTouch": "assets/images/favicon.ico",
+            "appleTouchMore": {
+                "120x120": "assets/images/favicon.ico",
+                "180x180": "assets/images/favicon.ico"
+            }
+        },
+        "mygitalk": {
+            "clientID": "614d54820d41237c9a62",
+            "clientSecret": "3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9",
+            "repo": "gitbook-issues-save",
+            "owner": "WINNERZR01",
+            "admin": ["WINNERZR01"],
+            "distractionFreeMode": false
+        },
+        "github-buttons": {
+            "buttons": [{
+              "user": "WINNERZR01",
+              "repo": "pythonnote",
+              "type": "star",
+              "size": "large"
+            }, {
+                "user": "WINNERZR01",
+                "type": "follow",
+                "width": "230",
+                "count": false
+              }]
+        }
+}}
