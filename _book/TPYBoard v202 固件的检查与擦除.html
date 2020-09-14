@@ -1,0 +1,688 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TPYBoard v202 固件的检查与擦除 · 我的python笔记本</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Winnerzr">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="TPYBoard v202 固件烧写.html" />
+    
+    
+    <link rel="prev" href="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html" />
+    
+
+    
+        <link rel="shortcut icon" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='assets/images/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.ico">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="micropythonnote.html">
+            
+                <a href="micropythonnote.html">
+            
+                    
+                    Micropython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="TPYBoard v202快速上手.html">
+            
+                <a href="TPYBoard v202快速上手.html">
+            
+                    
+                    TPYBoard v202快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="TPYBoard v202简介.html">
+            
+                <a href="TPYBoard v202简介.html">
+            
+                    
+                    TPYBoard v202简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="TPYBoard v202 GPIO的使用.html">
+            
+                <a href="TPYBoard v202 GPIO的使用.html">
+            
+                    
+                    TPYBoard v202 GPIO的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="TPYBoard v202 Network连接网络.html">
+            
+                <a href="TPYBoard v202 Network连接网络.html">
+            
+                    
+                    TPYBoard v202 Network连接网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="TPYBoard v202 连接Putty教程.html">
+            
+                <a href="TPYBoard v202 连接Putty教程.html">
+            
+                    
+                    TPYBoard v202 连接Putty教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="TPYBoard v202 定时器.html">
+            
+                <a href="TPYBoard v202 定时器.html">
+            
+                    
+                    TPYBoard v202 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="TPYBoard v202 舵机的基本介绍.html">
+            
+                <a href="TPYBoard v202 舵机的基本介绍.html">
+            
+                    
+                    TPYBoard v202 舵机的基本介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="TPYBoard v202 I2C操作DS3231时钟模块.html">
+            
+                <a href="TPYBoard v202 I2C操作DS3231时钟模块.html">
+            
+                    
+                    TPYBoard v202 I2C操作DS3231时钟模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="TPYBoard v202 通过HTTP协议上传温湿度数据.html">
+            
+                <a href="TPYBoard v202 通过HTTP协议上传温湿度数据.html">
+            
+                    
+                    TPYBoard v202 HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="TPYBoard v202 自制微信远程智能温湿度计.html">
+            
+                <a href="TPYBoard v202 自制微信远程智能温湿度计.html">
+            
+                    
+                    TPYBoard v202 微信远程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="TPYBoard v202 MQTT协议1接入OneNET云平台.html">
+            
+                <a href="TPYBoard v202 MQTT协议1接入OneNET云平台.html">
+            
+                    
+                    TPYBoard v202 MQTT协议1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="TPYBoard v202 MQTT协议2上传数据点到OneNET平台.html">
+            
+                <a href="TPYBoard v202 MQTT协议2上传数据点到OneNET平台.html">
+            
+                    
+                    TPYBoard v202 MQTT协议2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="TPYBoard v202 家庭气象站.html">
+            
+                <a href="TPYBoard v202 家庭气象站.html">
+            
+                    
+                    TPYBoard v202 家庭气象站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="TPYBoard制作廉价WIFI干扰器.html">
+            
+                <a href="TPYBoard制作廉价WIFI干扰器.html">
+            
+                    
+                    TPYBoard制作廉价WIFI干扰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="用单片机实现一次完整的wifi攻击.html">
+            
+                <a href="用单片机实现一次完整的wifi攻击.html">
+            
+                    
+                    TPYBorad用单片机实现一次完整的wifi攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html">
+            
+                <a href="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html">
+            
+                    
+                    TPYBoard v202 实现家庭智能控制平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.17" data-path="TPYBoard v202 固件的检查与擦除.html">
+            
+                <a href="TPYBoard v202 固件的检查与擦除.html">
+            
+                    
+                    TPYBoard v202 固件的检查与擦除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="TPYBoard v202 固件烧写.html">
+            
+                <a href="TPYBoard v202 固件烧写.html">
+            
+                    
+                    TPYBoard v202 固件烧写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="TPYBoard v202 智能WIFI远控小车.html">
+            
+                <a href="TPYBoard v202 智能WIFI远控小车.html">
+            
+                    
+                    TPYBoard v202 智能WIFI远控小车
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="参考资料.html">
+            
+                <a href="参考资料.html">
+            
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="pythonqt5.html">
+            
+                <a href="pythonqt5.html">
+            
+                    
+                    PythonQT5
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >TPYBoard v202 固件的检查与擦除</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#17tpyboard-v202-&#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;"><b></b>17.TPYBoard v202 &#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;</a></li><ul><li><span class="title-icon "></span><a href="#&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"><b></b>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x6240;&#x9700;&#x5668;&#x4EF6;"><b></b>&#x6240;&#x9700;&#x5668;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;"><b></b>&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;</a></li><li><span class="title-icon "></span><a href="#&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;"><b></b>&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;</a></li></ul></ul></div><a href="#17tpyboard-v202-&#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="17tpyboard-v202-&#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;"><a name="17tpyboard-v202-&#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;" class="anchor-navigation-ex-anchor" href="#17tpyboard-v202-&#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>17.TPYBoard v202 &#x56FA;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64E6;&#x9664;</h1>
+<h2 id="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"><a name="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h2>
+<ul>
+<li>TPYBoard v202&#x677F;&#x5B50; 1&#x5757;</li>
+<li>micro USB&#x6570;&#x636E;&#x7EBF; 1&#x6761;</li>
+<li>&#x7535;&#x8111; 1&#x53F0;&#xFF08;&#x672C;&#x6B21;&#x5B9E;&#x9A8C;&#x4EE5;win7&#x4E3A;&#x4F8B;&#xFF09;</li>
+<li>PuTTY(&#x5DE5;&#x5177;)</li>
+</ul>
+<h2 id="&#x6240;&#x9700;&#x5668;&#x4EF6;"><a name="&#x6240;&#x9700;&#x5668;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x6240;&#x9700;&#x5668;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6240;&#x9700;&#x5668;&#x4EF6;</h2>
+<ul>
+<li>TPYBoard v202&#x5F00;&#x53D1;&#x677F; 1&#x5757;</li>
+<li>USB&#x6570;&#x636E;&#x7EBF;&#xFF08;MicroUSB&#xFF09; 1&#x6761;</li>
+<li>L298N&#x7535;&#x673A;&#x9A71;&#x52A8;&#x6A21;&#x5757; 1&#x4E2A;</li>
+<li>&#x5C0F;&#x8F66;&#x5957;&#x4EF6;&#x5305;&#xFF08;&#x5E95;&#x677F;&#x3001;&#x7535;&#x673A;&#x7B49;&#xFF09; 1&#x4E2A;</li>
+<li>18650&#x7535;&#x6C60; 2&#x8282;</li>
+<li>18650&#x7535;&#x6C60;&#x76D2; 1&#x4E2A;</li>
+</ul>
+<h2 id="&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;"><a name="&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FA;&#x4EF6;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;</h2>
+<ul>
+<li><p>&#x5B89;&#x88C5;<code>putty</code></p>
+</li>
+<li><p>&#x901A;&#x8FC7;USB&#x6570;&#x636E;&#x7EBF;&#x5C06;&#x7535;&#x8111;&#x548C;TPYBoard v202&#x5F00;&#x53D1;&#x677F;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5B89;&#x88C5;USB&#x8F6C;&#x4E32;&#x7684;&#x9A71;&#x52A8;&#x3002;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x662F;&#x5426;&#x6B63;&#x786E;&#x521B;&#x5EFA;&#x4E32;&#x53E3;&#x3002;<img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200913231149152.png" alt="image-20200913231149152"></p>
+</li>
+<li><p>&#x6253;&#x5F00;PuTTY&#xFF0C;&#x6839;&#x636E;&#x4E0B;&#x56FE;&#x6807;&#x8BB0;&#x7684;&#x7EA2;&#x8272;&#x6846;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;<img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200913231207789.png" alt="image-20200913231207789" style="zoom:150%;"></p>
+</li>
+<li><p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5355;&#x51FB;open&#x6309;&#x94AE;<img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200913231240979.png" alt="image-20200913231240979" style="zoom:150%;"></p>
+</li>
+<li><p>&#x6309;&#x4E0B;&#x677F;&#x5B50;&#x4E0A;&#x7684;rst&#xFF0C;&#x8FDB;&#x884C;&#x91CD;&#x7F6E;<img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200913231258691.png" style="zoom:150%;"></p>
+</li>
+<li><p>&#x6309;&#x4E0B;&#x56FE;&#x547D;&#x4EE4;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> esp
+esp.check_fw()
+</code></pre>
+<p><img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200913231437386.png" alt="image-20200913231437386" style="zoom:150%;"></p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6700;&#x540E;&#x663E;&#x793A;<code>True</code>&#xFF0C;&#x4EE3;&#x8868;&#x56FA;&#x4EF6;&#x662F;&#x5B8C;&#x6574;&#x7684;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x663E;&#x793A;False&#xFF0C;&#x6700;&#x597D;&#x91CD;&#x65B0;&#x5237;&#x4E00;&#x6B21;&#x56FA;&#x4EF6;&#x3002; &#x8BE6;&#x60C5;&#x53EF;&#x53C2;&#x8003;&#x4E0B;&#x4E00;&#x7BC7;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x56FA;&#x4EF6;&#x7684;&#x70E7;&#x5199;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;"><a name="&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FA;&#x4EF6;&#x7684;&#x64E6;&#x9664;</h2>
+<ul>
+<li><p>&#x5B89;&#x88C5;<code>Python</code>&#x73AF;&#x5883;</p>
+</li>
+<li><p>&#x5B89;&#x88C5;<code>esptool</code>&#x548C;<code>pyserial</code>&#xFF0C;&#x5728;CMD&#x547D;&#x4EE4;&#x884C;&#x91CC;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-python">pip install esptool
+</code></pre>
+<p>&#x548C;</p>
+<pre><code class="lang-python">pip install pyserial
+</code></pre>
+</li>
+<li><p>&#x64E6;&#x9664;flash</p>
+</li>
+<li><p>&#x6253;&#x5F00;<code>cmd</code>&#xFF0C;&#x8FD0;&#x884C;&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-python">esptool.py --port COM3 erase_flash
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<p>&#x6267;&#x884C;&#x64E6;&#x9664;&#x7684;&#x6307;&#x4EE4;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x50CF;&#x70E7;&#x5F55;&#x56FA;&#x4EF6;&#x4E00;&#x6837;&#xFF0C;&#x8BA9;esp8266&#x8FDB;&#x5165;<code>&#x70E7;&#x5199;&#x6A21;&#x5F0F;</code>)&#x5373;<code>&#x6309;&#x4F4F;</code>&#x677F;&#x4E0A;&#x7684;<code>FLASH</code>&#x952E;&#x4E0D;&#x653E;&#xFF0C;<code>&#x6309;&#x4E0B;RST</code>&#x952E;<code>&#x677E;&#x5F00;</code>&#xFF0C;&#x5F53;&#x754C;&#x9762;&#x663E;&#x793A;&#x51FA;MAC&#x5730;&#x5740;&#x540E;&#xFF0C;&#x5373;&#x53EF;<code>&#x677E;&#x5F00;FLASH</code>&#x6309;&#x952E;&#x7B49;&#x5F85;&#x64E6;&#x9664;&#x5B8C;&#x6BD5;&#x3002;&#x5982;&#x679C;&#x5728;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x8BA9;&#x677F;&#x5B50;&#x8FDB;&#x5165;&#x70E7;&#x5199;&#x6A21;&#x5F0F;&#x7684;&#x8BDD; &#xFF0C;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x7684;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#xFF1A;<code>A fatal error occurred: Failed to connect to ESP8226</code></p>
+<p>&#x56FA;&#x4EF6;&#x6210;&#x529F;&#x64E6;&#x9664;&#x540E;&#xFF0C;&#x53EF;&#x53C2;&#x8003;&#x4E0B;&#x4E00;&#x7BC7;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x56FA;&#x4EF6;&#x7684;&#x70E7;&#x5199;&#x3002;</p>
+</blockquote>
+<p><footer class="page-footer"><span class="copyright">&#xA9; by Winnerzr all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x6863;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-09-14 23:31:54
+</span></footer></p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html" class="navigation navigation-prev " aria-label="Previous page: TPYBoard v202 实现家庭智能控制平台">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="TPYBoard v202 固件烧写.html" class="navigation navigation-next " aria-label="Next page: TPYBoard v202 固件烧写">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TPYBoard v202 固件的检查与擦除","level":"1.2.17","depth":2,"next":{"title":"TPYBoard v202 固件烧写","level":"1.2.18","depth":2,"path":"TPYBoard v202 固件烧写.md","ref":"TPYBoard v202 固件烧写.md","articles":[]},"previous":{"title":"TPYBoard v202 实现家庭智能控制平台","level":"1.2.16","depth":2,"path":"TPYBoard v202 利用单片机快速实现家庭智能控制平台.md","ref":"TPYBoard v202 利用单片机快速实现家庭智能控制平台.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"TPYBoard v202 固件的检查与擦除.md","mtime":"2020-09-14T15:31:54.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-14T15:37:23.803Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
