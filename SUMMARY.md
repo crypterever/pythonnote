@@ -23,4 +23,12 @@
   - [TPYBoard v202 固件烧写](TPYBoard v202 固件烧写.md)
   - [TPYBoard v202 智能WIFI远控小车](TPYBoard v202 智能WIFI远控小车.md)
   - [参考资料](参考资料.md)
+- [PythonBOOK](PythonBook.md)
+  - [第一章开始使用Python](第一章开始使用Python.md)
+  - [第二章Python和编程](第二章Python和编程.md)
+  - [第三章Python程序结构](第三章Python程序结构.md)
+  - [第四章Python使用变量](第四章Python使用变量.md)
 - [PythonQT5](pythonqt5.md)
+
+- [Python sys](syslibrary.md)
+- 
