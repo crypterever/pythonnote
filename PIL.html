@@ -1,0 +1,980 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python PIL · 我的python笔记本</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Winnerzr">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="syslibrary.html" />
+    
+
+    
+        <link rel="shortcut icon" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='assets/images/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.ico">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="micropythonnote.html">
+            
+                <a href="micropythonnote.html">
+            
+                    
+                    Micropython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="TPYBoard v202快速上手.html">
+            
+                <a href="TPYBoard v202快速上手.html">
+            
+                    
+                    TPYBoard v202快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="TPYBoard v202简介.html">
+            
+                <a href="TPYBoard v202简介.html">
+            
+                    
+                    TPYBoard v202简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="TPYBoard v202 GPIO的使用.html">
+            
+                <a href="TPYBoard v202 GPIO的使用.html">
+            
+                    
+                    TPYBoard v202 GPIO的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="TPYBoard v202 Network连接网络.html">
+            
+                <a href="TPYBoard v202 Network连接网络.html">
+            
+                    
+                    TPYBoard v202 Network连接网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="TPYBoard v202 连接Putty教程.html">
+            
+                <a href="TPYBoard v202 连接Putty教程.html">
+            
+                    
+                    TPYBoard v202 连接Putty教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="TPYBoard v202 定时器.html">
+            
+                <a href="TPYBoard v202 定时器.html">
+            
+                    
+                    TPYBoard v202 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="TPYBoard v202 舵机的基本介绍.html">
+            
+                <a href="TPYBoard v202 舵机的基本介绍.html">
+            
+                    
+                    TPYBoard v202 舵机的基本介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="TPYBoard v202 I2C操作DS3231时钟模块.html">
+            
+                <a href="TPYBoard v202 I2C操作DS3231时钟模块.html">
+            
+                    
+                    TPYBoard v202 I2C操作DS3231时钟模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="TPYBoard v202 通过HTTP协议上传温湿度数据.html">
+            
+                <a href="TPYBoard v202 通过HTTP协议上传温湿度数据.html">
+            
+                    
+                    TPYBoard v202 HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="TPYBoard v202 自制微信远程智能温湿度计.html">
+            
+                <a href="TPYBoard v202 自制微信远程智能温湿度计.html">
+            
+                    
+                    TPYBoard v202 微信远程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="TPYBoard v202 MQTT协议1接入OneNET云平台.html">
+            
+                <a href="TPYBoard v202 MQTT协议1接入OneNET云平台.html">
+            
+                    
+                    TPYBoard v202 MQTT协议1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="TPYBoard v202 MQTT协议2上传数据点到OneNET平台.html">
+            
+                <a href="TPYBoard v202 MQTT协议2上传数据点到OneNET平台.html">
+            
+                    
+                    TPYBoard v202 MQTT协议2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="TPYBoard v202 家庭气象站.html">
+            
+                <a href="TPYBoard v202 家庭气象站.html">
+            
+                    
+                    TPYBoard v202 家庭气象站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="TPYBoard制作廉价WIFI干扰器.html">
+            
+                <a href="TPYBoard制作廉价WIFI干扰器.html">
+            
+                    
+                    TPYBoard制作廉价WIFI干扰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="用单片机实现一次完整的wifi攻击.html">
+            
+                <a href="用单片机实现一次完整的wifi攻击.html">
+            
+                    
+                    TPYBorad用单片机实现一次完整的wifi攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html">
+            
+                <a href="TPYBoard v202 利用单片机快速实现家庭智能控制平台.html">
+            
+                    
+                    TPYBoard v202 实现家庭智能控制平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="TPYBoard v202 固件的检查与擦除.html">
+            
+                <a href="TPYBoard v202 固件的检查与擦除.html">
+            
+                    
+                    TPYBoard v202 固件的检查与擦除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="TPYBoard v202 固件烧写.html">
+            
+                <a href="TPYBoard v202 固件烧写.html">
+            
+                    
+                    TPYBoard v202 固件烧写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="TPYBoard v202 智能WIFI远控小车.html">
+            
+                <a href="TPYBoard v202 智能WIFI远控小车.html">
+            
+                    
+                    TPYBoard v202 智能WIFI远控小车
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="参考资料.html">
+            
+                <a href="参考资料.html">
+            
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="PythonBook.html">
+            
+                <a href="PythonBook.html">
+            
+                    
+                    PythonBOOK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="第一章开始使用Python.html">
+            
+                <a href="第一章开始使用Python.html">
+            
+                    
+                    第一章开始使用Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="第二章Python和编程.html">
+            
+                <a href="第二章Python和编程.html">
+            
+                    
+                    第二章Python和编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="第三章Python程序结构.html">
+            
+                <a href="第三章Python程序结构.html">
+            
+                    
+                    第三章Python程序结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="第四章Python使用变量.html">
+            
+                <a href="第四章Python使用变量.html">
+            
+                    
+                    第四章Python使用变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pythonqt5.html">
+            
+                <a href="pythonqt5.html">
+            
+                    
+                    PythonQT5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PythonLibrary.html">
+            
+                <a href="PythonLibrary.html">
+            
+                    
+                    PythonLibrary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syslibrary.html">
+            
+                <a href="syslibrary.html">
+            
+                    
+                    Python sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="PIL.html">
+            
+                <a href="PIL.html">
+            
+                    
+                    Python PIL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Python PIL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#python&#x5E93;-pil&#x5E93;&#x4ECB;&#x7ECD;"><b></b>Python&#x5E93;-PIL&#x5E93;&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#image&#x6A21;&#x5757;"><b></b>Image&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;"><b></b>Image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#signature"><b></b>SIGNATURE</a></li><li><span class="title-icon "></span><a href="#returns"><b></b>RETURNS</a></li><li><span class="title-icon "></span><a href="#how-others-used-this"><b></b>HOW OTHERS USED THIS</a></li><li><span class="title-icon "></span><a href="#description"><b></b>DESCRIPTION</a></li><li><span class="title-icon "></span><a href="#signature_1"><b></b>SIGNATURE</a></li><li><span class="title-icon "></span><a href="#returns_1"><b></b>RETURNS</a></li><li><span class="title-icon "></span><a href="#how-others-used-this_1"><b></b>HOW OTHERS USED THIS</a></li><li><span class="title-icon "></span><a href="#description_1"><b></b>DESCRIPTION</a></li><ul><li><span class="title-icon "></span><a href="#image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;"><b></b>Image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#signature_2"><b></b>SIGNATURE</a></li><li><span class="title-icon "></span><a href="#params"><b></b>**PARAMS</a></li><li><span class="title-icon "></span><a href="#how-others-used-this_2"><b></b>HOW OTHERS USED THIS</a></li><li><span class="title-icon "></span><a href="#description_2"><b></b>DESCRIPTION</a></li><li><span class="title-icon "></span><a href="#signature_3"><b></b>SIGNATURE</a></li><li><span class="title-icon "></span><a href="#returns_2"><b></b>RETURNS</a></li><li><span class="title-icon "></span><a href="#how-others-used-this_3"><b></b>HOW OTHERS USED THIS</a></li><li><span class="title-icon "></span><a href="#description_3"><b></b>DESCRIPTION</a></li></ul></ul></div><a href="#python&#x5E93;-pil&#x5E93;&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="python&#x5E93;-pil&#x5E93;&#x4ECB;&#x7ECD;"><a name="python&#x5E93;-pil&#x5E93;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#python&#x5E93;-pil&#x5E93;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>Python&#x5E93;-PIL&#x5E93;&#x4ECB;&#x7ECD;</h1>
+<h2 id="image&#x6A21;&#x5757;"><a name="image&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#image&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>Image&#x6A21;&#x5757;</h2>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5BF9;&#x56FE;&#x50CF;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF1A;open&#x3001;save&#x3001;conver&#x3001;show...&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<h3 id="image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;"><a name="image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>Image&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;</h3>
+<h4 id="open"><a name="open" class="anchor-navigation-ex-anchor" href="#open"><i class="fa fa-link" aria-hidden="true"></i></a>open</h4>
+<p>&#x4ECE;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x56FE;&#x50CF;&#xFF0C;&#x4F7F;&#x7528;<code>open</code>&#x51FD;&#x6570;&#xFF0C;&#x5728;<code>Image</code>&#x6A21;&#x5757;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-meta">@winnerzr</span>
+    <span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image                  <span class="hljs-comment"># &#x8C03;&#x7528;&#x5E93;</span>
+    im = Image.open(<span class="hljs-string">&quot;E:\demo.jpg&quot;</span>)       <span class="hljs-comment"># &#x6587;&#x4EF6;&#x5B58;&#x5728;&#x7684;&#x8DEF;&#x5F84; </span>
+    im.show()                             <span class="hljs-comment"># &#x663E;&#x793A;&#x56FE;&#x7247;</span>
+</code></pre>
+<blockquote>
+<p><code>Kite</code>Docs&#xFF1A;<a href="">Image</a>.open</p>
+<p>function</p>
+<h2 id="signature"><a name="signature" class="anchor-navigation-ex-anchor" href="#signature"><i class="fa fa-link" aria-hidden="true"></i></a>SIGNATURE</h2>
+<pre><code class="lang-python">fp,
+mode=str
+</code></pre>
+<h2 id="returns"><a name="returns" class="anchor-navigation-ex-anchor" href="#returns"><i class="fa fa-link" aria-hidden="true"></i></a>RETURNS</h2>
+<p>PngImageFile | JpegImageFile | GifImageFile</p>
+<h2 id="how-others-used-this"><a name="how-others-used-this" class="anchor-navigation-ex-anchor" href="#how-others-used-this"><i class="fa fa-link" aria-hidden="true"></i></a>HOW OTHERS USED THIS</h2>
+<pre><code class="lang-python">open(fp)
+</code></pre>
+<h2 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>DESCRIPTION</h2>
+<p>Opens and identifies the given image file.</p>
+<p>This is a lazy operation; this function identifies the file, but the file remains open and the actual image data is not read from the file until you try to process the data (or call the <a href="id1">:py:meth:<code>~PIL.Image.Image.load</code></a> method). See <a href="id3">:py:func:<code>~PIL.Image.new</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>param fp:</th>
+<th>A filename (string), pathlib.Path object or a file object. The file object must implement<a href="id5">:py:meth:<code>~file.read</code></a>,<a href="id7">:py:meth:<code>~file.seek</code></a>, and<a href="id9">:py:meth:<code>~file.tell</code></a>methods, and be opened in binary mode.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>param mode:</td>
+<td>The mode. If given, this argument must be &quot;r&quot;.</td>
+</tr>
+<tr>
+<td>returns:</td>
+<td>An<a href="id11">:py:class:<code>~PIL.Image.Image</code></a>object.</td>
+</tr>
+<tr>
+<td>exception IOError:</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>If the file cannot be found, or the image cannot be opened and identified.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="new"><a name="new" class="anchor-navigation-ex-anchor" href="#new"><i class="fa fa-link" aria-hidden="true"></i></a>new</h4>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x526F;&#x5C3A;&#x5BF8;&#x548C;&#x6A21;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5982;&#x679C;&#x7701;&#x7565;<code>color</code>&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x7684;&#x56FE;&#x7247;&#x88AB;&#x9ED1;&#x8272;&#x586B;&#x5145;&#x6EE1;&#xFF0C;&#x5982;&#x679C;<code>color</code>&#x53C2;&#x6570;&#x662F;<code>None</code>&#x503C;&#xFF0C;&#x5219;&#x56FE;&#x7247;&#x8FD8;&#x6CA1;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+img_b = Image.new(<span class="hljs-string">&quot;RGB&quot;</span>,(<span class="hljs-number">32</span>,<span class="hljs-number">32</span>))<span class="hljs-comment">#&#x4E0D;&#x6307;&#x5B9A;color&#xFF0C;&#x5219;&#x4E3A;&#x9ED1;&#x8272;#000000</span>
+plt.imshow(img_b)
+plt.show()
+print(img_b.format)<span class="hljs-comment">#python&#x521B;&#x5EFA;&#x7684;&#x56FE;&#x50CF;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;None</span>
+img_r = Image.new(<span class="hljs-string">&quot;RGB&quot;</span>,(<span class="hljs-number">32</span>,<span class="hljs-number">32</span>),<span class="hljs-string">&quot;red&quot;</span>)
+plt.imshow(img_r)
+plt.show()
+img_g = Image.new(<span class="hljs-string">&quot;RGB&quot;</span>,(<span class="hljs-number">32</span>,<span class="hljs-number">32</span>),<span class="hljs-string">&quot;#00FF00&quot;</span>)
+plt.imshow(img_g)
+plt.show()
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;<img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201017204454586.png" alt="image-20201017204454586"></p>
+<p><img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201017204512481.png" alt="image-20201017204512481"></p>
+<p><img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201017204522225.png" alt="image-20201017204522225"></p>
+<blockquote>
+<p><code>Kite</code>Docs&#xFF1A;<a href="">Image</a>.new</p>
+<p>function</p>
+<h2 id="signature_1"><a name="signature_1" class="anchor-navigation-ex-anchor" href="#signature_1"><i class="fa fa-link" aria-hidden="true"></i></a>SIGNATURE</h2>
+<pre><code class="lang-python">mode,
+size,
+color=<span class="hljs-number">0</span>
+</code></pre>
+<h2 id="returns_1"><a name="returns_1" class="anchor-navigation-ex-anchor" href="#returns_1"><i class="fa fa-link" aria-hidden="true"></i></a>RETURNS</h2>
+<p>Image</p>
+<h2 id="how-others-used-this_1"><a name="how-others-used-this_1" class="anchor-navigation-ex-anchor" href="#how-others-used-this_1"><i class="fa fa-link" aria-hidden="true"></i></a>HOW OTHERS USED THIS</h2>
+<pre><code class="lang-python">new(mode, size, color)
+new(mode, size)
+new(mode, size, color)
+</code></pre>
+<h2 id="description_1"><a name="description_1" class="anchor-navigation-ex-anchor" href="#description_1"><i class="fa fa-link" aria-hidden="true"></i></a>DESCRIPTION</h2>
+<p>Creates a new image with the given mode and size.</p>
+<table>
+<thead>
+<tr>
+<th>param mode:</th>
+<th>The mode to use for the new image. See:concept-modes.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>param size:</td>
+<td>A 2-tuple, containing (width, height) in pixels.</td>
+</tr>
+<tr>
+<td>param color:</td>
+<td>What color to use for the image. Default is black. If given, this should be a single integer or floating point value for single-band modes, and a tuple for multi-band modes (one value per band). When creating RGB images, you can also use color strings as supported by the ImageColor module. If the color is None, the image is not initialised.</td>
+</tr>
+<tr>
+<td>returns:</td>
+<td>An<a href="id1">:py:class:<code>~PIL.Image.Image</code></a>object.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;"><a name="image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Image&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</h3>
+<h4 id="save"><a name="save" class="anchor-navigation-ex-anchor" href="#save"><i class="fa fa-link" aria-hidden="true"></i></a>save</h4>
+<p>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;E:\demo.jpg&quot;</span>)
+print(im)                              <span class="hljs-comment"># &#x6253;&#x5370;&#x51FA;&#x539F;&#x56FE;&#x7247;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</span>
+im.save(<span class="hljs-string">&quot;E:\demo.png&quot;</span>)              <span class="hljs-comment"># &#x5C06;&quot;E:\mywife.jpg&quot;&#x4FDD;&#x5B58;&#x4E3A;&quot;E:\mywife.png&quot;</span>
+im = Image.open(<span class="hljs-string">&quot;E:\demo.png&quot;</span>)       <span class="hljs-comment"># &#x6253;&#x5F00;&#x65B0;&#x7684;png&#x56FE;&#x7247;</span>
+print(im.format, im.size, im.mode)  <span class="hljs-comment"># &#x6253;&#x5370;&#x51FA;&#x8F6C;&#x6362;&#x540E;&#x56FE;&#x7247;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF08;&#x8FD9;&#x91CC;&#x662F;&#x683C;&#x5F0F;&#xFF0C;&#x5927;&#x5C0F;&#xFF0C;&#x8272;&#x5F69;&#x6A21;&#x5F0F;&#xFF09;</span>
+</code></pre>
+<blockquote>
+<p><code>Kite</code>Docs&#xFF1A;<a href="">Image</a>.save</p>
+<p>function</p>
+<h2 id="signature_2"><a name="signature_2" class="anchor-navigation-ex-anchor" href="#signature_2"><i class="fa fa-link" aria-hidden="true"></i></a>SIGNATURE</h2>
+<pre><code class="lang-python">fp,
+format=<span class="hljs-keyword">None</span>,
+**params
+</code></pre>
+<h2 id="params"><a name="params" class="anchor-navigation-ex-anchor" href="#params"><i class="fa fa-link" aria-hidden="true"></i></a>**PARAMS</h2>
+<p>Expand</p>
+<h2 id="how-others-used-this_2"><a name="how-others-used-this_2" class="anchor-navigation-ex-anchor" href="#how-others-used-this_2"><i class="fa fa-link" aria-hidden="true"></i></a>HOW OTHERS USED THIS</h2>
+<pre><code class="lang-python">save(fp)
+save(fp, format)
+save(fp, format, quality)
+save(fp, format)
+save(fp, quality)
+</code></pre>
+<h2 id="description_2"><a name="description_2" class="anchor-navigation-ex-anchor" href="#description_2"><i class="fa fa-link" aria-hidden="true"></i></a>DESCRIPTION</h2>
+<p>Saves this image under the given filename. If no format is specified, the format to use is determined from the filename extension, if possible.</p>
+<p>Keyword options can be used to provide additional instructions to the writer. If a writer doesn&apos;t recognise an option, it is silently ignored. The available options are described in the <a href="id1">:doc:<code>image format documentation &lt;../handbook/image-file-formats&gt;</code></a> for each writer.</p>
+<p>You can use a file object instead of a filename. In this case, you must always specify the format. The file object must implement the <code>seek</code>, <code>tell</code>, and <code>write</code> methods, and be opened in binary mode.</p>
+<table>
+<thead>
+<tr>
+<th>param fp:</th>
+<th>A filename (string), pathlib.Path object or file object.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>param format:</td>
+<td>Optional format override. If omitted, the format to use is determined from the filename extension. If a file object was used instead of a filename, this parameter should always be used.</td>
+</tr>
+<tr>
+<td>param options:</td>
+<td>Extra parameters to the image writer.</td>
+</tr>
+<tr>
+<td>returns:</td>
+<td>None</td>
+</tr>
+<tr>
+<td>exception KeyError:</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>If the output format could not be determined from the file name. Use the format option to solve this.</td>
+</tr>
+<tr>
+<td>exception IOError:</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>If the file could not be written. The file may have been created, and may contain partial data.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="convert"><a name="convert" class="anchor-navigation-ex-anchor" href="#convert"><i class="fa fa-link" aria-hidden="true"></i></a>convert</h4>
+<p>&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#x5E76;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;0000.jpg&quot;</span>) <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x56FE;&#x7247;</span>
+new_im = im.convert(<span class="hljs-string">&apos;1&apos;</span>)    <span class="hljs-comment"># &#x8F93;&#x51FA;&#x7070;&#x5EA6;&#x56FE;</span>
+print(new_im.mode)             <span class="hljs-comment"># &#x6253;&#x5370;&#x5F53;&#x524D;&#x56FE;&#x50CF;&#x6A21;&#x5F0F;</span>
+new_im.show()                 <span class="hljs-comment"># &#x663E;&#x793A;&#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x56FE;&#x7247;</span>
+</code></pre>
+<blockquote>
+<p><code>Kite</code>Docs&#xFF1A;<a href="">Image</a>.convert</p>
+<p>function</p>
+<h2 id="signature_3"><a name="signature_3" class="anchor-navigation-ex-anchor" href="#signature_3"><i class="fa fa-link" aria-hidden="true"></i></a>SIGNATURE</h2>
+<pre><code class="lang-python">mode=<span class="hljs-keyword">None</span>,
+matrix=<span class="hljs-keyword">None</span>,
+dither=<span class="hljs-keyword">None</span>,
+palette=<span class="hljs-number">0</span>,
+colors=<span class="hljs-number">256</span>
+</code></pre>
+<h2 id="returns_2"><a name="returns_2" class="anchor-navigation-ex-anchor" href="#returns_2"><i class="fa fa-link" aria-hidden="true"></i></a>RETURNS</h2>
+<p>Image | JpegImageFile | PngImageFile | DibImageFile | Jpeg2KImageFile</p>
+<h2 id="how-others-used-this_3"><a name="how-others-used-this_3" class="anchor-navigation-ex-anchor" href="#how-others-used-this_3"><i class="fa fa-link" aria-hidden="true"></i></a>HOW OTHERS USED THIS</h2>
+<pre><code class="lang-python">convert(mode)
+</code></pre>
+<h2 id="description_3"><a name="description_3" class="anchor-navigation-ex-anchor" href="#description_3"><i class="fa fa-link" aria-hidden="true"></i></a>DESCRIPTION</h2>
+<p>Returns a converted copy of this image. For the &quot;P&quot; mode, this method translates pixels through the palette. If mode is omitted, a mode is chosen so that all information in the image and the palette can be represented without a palette.</p>
+<p>The current version supports all possible conversions between &quot;L&quot;, &quot;RGB&quot; and &quot;CMYK.&quot; The <strong>matrix</strong> argument only supports &quot;L&quot; and &quot;RGB&quot;.</p>
+<p>When translating a color image to black and white (mode &quot;L&quot;), the library uses the ITU-R 601-2 luma transform:</p>
+<pre><code class="lang-python">L = R * <span class="hljs-number">299</span>/<span class="hljs-number">1000</span> + G * <span class="hljs-number">587</span>/<span class="hljs-number">1000</span> + B * <span class="hljs-number">114</span>/<span class="hljs-number">1000</span>
+</code></pre>
+<p>The default method of converting a greyscale (&quot;L&quot;) or &quot;RGB&quot; image into a bilevel (mode &quot;1&quot;) image uses Floyd-Steinberg dither to approximate the original image luminosity levels. If dither is NONE, all non-zero values are set to 255 (white). To use other thresholds, use the <a href="id1">:py:meth:<code>~PIL.Image.Image.point</code></a> method.</p>
+<table>
+<thead>
+<tr>
+<th>param mode:</th>
+<th>The requested mode. See:concept-modes.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>param matrix:</td>
+<td>An optional conversion matrix. If given, this should be 4- or 12-tuple containing floating point values.</td>
+</tr>
+<tr>
+<td>param dither:</td>
+<td>Dithering method, used when converting from mode &quot;RGB&quot; to &quot;P&quot; or from &quot;RGB&quot; or &quot;L&quot; to &quot;1&quot;. Available methods are NONE or FLOYDSTEINBERG (default).</td>
+</tr>
+<tr>
+<td>param palette:</td>
+<td>Palette to use when converting from mode &quot;RGB&quot; to &quot;P&quot;. Available palettes are WEB or ADAPTIVE.</td>
+</tr>
+<tr>
+<td>param colors:</td>
+<td>Number of colors to use for the ADAPTIVE palette. Defaults to 256.</td>
+</tr>
+<tr>
+<td>rtype:</td>
+<td><a href="id3">:py:class:<code>~PIL.Image.Image</code></a></td>
+</tr>
+<tr>
+<td>returns:</td>
+<td>An<a href="id5">:py:class:<code>~PIL.Image.Image</code></a>object.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><footer class="page-footer"><span class="copyright">&#xA9; by Winnerzr all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x6863;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-10-17 21:23:33
+</span></footer></p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="syslibrary.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Python sys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python PIL","level":"1.5.2","depth":2,"previous":{"title":"Python sys","level":"1.5.1","depth":2,"path":"syslibrary.md","ref":"syslibrary.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"PIL.md","mtime":"2020-10-17T13:23:33.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-17T13:28:07.201Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
