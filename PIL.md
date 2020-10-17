@@ -1,5 +1,254 @@
 # Python库-PIL库介绍
 
+## PIL图像处理库中的基本概念介绍
+
+### 通道（`bands`）
+
+每张图片都是由一个或者多个数据通道构成。PIL允许在单张图片中合成相同维数和深度的多个通道。
+
+以`RGB`图像为例，每张图片都是由三个数据通道构成，分别为`R`、`G`和`B`通道。而对于灰度图像，则只有一个通道。
+
+对于一张图片的通道数量和名称，可以通过方法`getbands()`来获取。方法`getbands()`是`Image`模块的方法，它会返回一个字符串元组（`tuple`）。该元组将包括每一个通道的名称。
+
+方法`getbands()`的使用如下：
+
+```python
+程序：from PIL import Image
+	 im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+	 im.getbands()
+
+输出：('R', 'G', 'B')
+
+程序：im_bands = im.getbands()
+	 len(im_bands)
+
+输出：3
+
+程序：print im_bands[0]
+
+输出：R
+
+程序：print im_bands[1]
+
+输出：G
+
+程序：print im_bands[2]
+
+输出：B
+```
+
+### 模式（`mode`）
+
+图像的模式定义了图像的类型和像素的位宽。当前支持如下模式：
+
+| 1     | 1位像素，表示黑和白，但是存储的时候每个像素存储为8bit        |
+| :---- | ------------------------------------------------------------ |
+| L     | 8位像素，表示黑和白。                                        |
+| P     | 8位像素，使用调色板映射到其他模式。**1模式也是八位一个像素，只是值不是0就是255，非黑即白 L模式八位一个像素，值除了有0和255外，还有很多中间值表示灰色，所以称为灰度模式** |
+| RGB   | 3x8位像素，为真彩色。                                        |
+| RGBA  | 4x8位像素，有透明通道的真彩色。                              |
+| CMYK  | 4x8位像素，颜色分离。                                        |
+| YCbCr | 3x8位像素，彩色视频格式。                                    |
+| I     | 32位整型像素。                                               |
+| F     | 32位浮点型像素。                                             |
+
+`PIL`也支持一些特殊的模式，包括`RGBX`（有`padding`的真彩色）和`RGBa`（有自左乘`alpha`的真彩色）。
+
+可以通过`mode`属性读取图像的模式。其返回值是包括上述模式的字符串。
+
+属性`mode`的使用方法：
+
+```python
+程序：from PIL importImage
+	 im =Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+	 im.mode
+
+输出：(800, 450)
+
+程序：md = im.mode
+	 print md
+
+输出：RGB
+```
+
+### 尺寸（`size`）
+
+通过`size`属性可以获取图片的尺寸。这是一个二元组，包含水平和垂直方向上的像素数。
+
+属性`size`的使用方法：
+
+```python
+程序：from PIL importImage
+	 im =Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+	 im.size
+
+输出：(800, 450)
+
+程序：im_size = im.size
+	 print im_size[0]
+
+输出：800
+
+程序：print im_size[1]
+
+输出：450
+```
+
+### 坐标（`coordinate system`）
+
+`PIL`使用笛卡尔像素坐标系统，坐标`(0，0)`位于左上角。注意：坐标值表示像素的角；位于坐标`（0，0）`处的像素的中心实际上位于`（0.5，0.5）`。
+
+坐标经常用于二元组`（x，y）`。长方形则表示为四元组，前面是左上角坐标。例如，一个覆盖`800x600`的像素图像的长方形表示为`（0，0，800，600）`。
+
+### 调色板（`palette`）
+
+调色板模式 ("`P`")使用一个颜色调色板为每个像素定义具体的颜色值
+
+### 信息（`info`）
+
+使用`info`属性可以为一张图片添加一些辅助信息。这个是字典对象。加载和保存图像文件时，多少信息需要处理取决于文件格式。
+```python
+程序：from PIL import Image
+	 im =Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+	 print(im.info)
+
+输出：{'jfif_version':(1, 1), 'jfif': 257, 'jfif_unit': 1, 'jfif_density': (96, 96), 'dpi': (96, 96)}
+
+程序：im_info = im.info
+	 print(im_info)
+
+输出：{'jfif_version':(1, 1), 'jfif': 257, 'jfif_unit': 1, 'jfif_density': (96, 96), 'dpi': (96, 96)}
+
+程序：print im_info['jfif_version']
+
+输出：(1, 1)
+
+程序：print im_info['jfif']
+
+输出：257
+```
+
+### 滤波器（`filters`）
+
+对于将多个输入像素映射为一个输出像素的几何操作，PIL提供了4个不同的采样滤波器：
+
+`NEAREST`：最近滤波。从输入图像中选取最近的像素作为输出像素。它忽略了所有其他的像素。
+
+`BILINEAR`：双线性滤波。在输入图像的2x2矩阵上进行线性插值。注意：PIL的当前版本，做下采样时该滤波器使用了固定输入模板。
+
+`BICUBIC`：双立方滤波。在输入图像的4x4矩阵上进行立方插值。注意：PIL的当前版本，做下采样时该滤波器使用了固定输入模板。
+
+`ANTIALIAS`：平滑滤波。这是PIL 1.1.3版本中新的滤波器。对所有可以影响输出像素的输入像素进行高质量的重采样滤波，以计算输出像素值。在当前的PIL版本中，这个滤波器只用于改变尺寸和缩略图方法。
+
+注意：在当前的`PIL`版本中，`ANTIALIAS`滤波器是下采样（例如，将一个大的图像转换为小图）时唯一正确的滤波器。`BILIEAR`和`BICUBIC`滤波器使用固定的输入模板，用于固定比例的几何变换和上采样是最好的。
+
+`Image`模块中的方法`resize()`和`thumbnail()`用到了滤波器。
+
+方法`resize()`的使用如下：
+
+方法`resize()`的定义为：
+
+```python
+resize(size, filter=None)=> image
+```
+
+```python
+程序：from PIL import Image
+	 im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+	 im.size
+
+输出：(800, 450)
+
+程序：im_resize = im.resize((256,256))
+	 im_resize.size
+
+输出：(256, 256)
+```
+
+对参数`filter`不赋值的话，方法`resize()`默认使用`NEAREST`滤波器。如果要使用其他滤波器可以通过下面的方法来实现：
+
+```python
+>>>im_resize0 = im.resize((256,256), Image.BILINEAR)
+
+>>>im_resize0.size
+
+(256, 256)
+
+>>>im_resize1 = im.resize((256,256), Image.BICUBIC)
+
+>>>im_resize1.size
+
+(256, 256)
+
+>>>im_resize2 = im.resize((256,256), Image.ANTIALIAS)
+
+>>>im_resize2.size
+
+(256, 256)
+
+方法thumbnail ()的使用如下：
+
+方法thumbnail ()的定义为：im.thumbnail(size, filter=None)
+
+>>>from PIL import Image
+
+>>> im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+
+>>>im.size
+
+(800, 450)
+
+>>>im.thumbnail((200,200))
+
+>>>im.size
+
+(200,112)
+```
+
+这里需要说明的是，方法`thumbnail()`需要保持宽高比，对于`size=(200,200)`的输入参数，其最终的缩略图尺寸为`(200, 112)`。
+
+对参数`filter`不赋值的话，方法`thumbnail()`默认使用`NEAREST`滤波器。如果要使用其他滤波器可以通过下面的方法来实现：
+
+```python
+>>> im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+
+>>>im.size
+
+(800, 450)
+
+>>> im.thumbnail((200,200),Image.BILINEAR)
+
+>>> im.size
+
+(200, 112)
+
+>>> im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+
+>>>im.size
+
+(800, 450)
+
+>>> im.thumbnail((200,200), Image.BICUBIC)
+
+>>> im.size
+
+(200, 112)
+
+>>> im= Image.open('D:\\Code\\Python\\test\\img\\1.jpg')
+
+>>>im.size
+
+(800, 450)
+
+>>> im.thumbnail((200,200), Image.ANTIALIAS)
+
+>>> im.size
+
+(200, 112)
+```
+
+
+
 ## Image模块
 
 > 可以实现对图像的基本操作：open、save、conver、show...等功能。
@@ -178,10 +427,16 @@ print(im.format, im.size, im.mode)  # 打印出转换后图片的相关信息（
 ```python
 from PIL import Image
 im = Image.open("0000.jpg") # 读取图片
-new_im = im.convert('1')	# 输出灰度图
+new_im = im.convert('1')	# 输出格式为1的图片
 print(new_im.mode)			 # 打印当前图像模式
 new_im.show()				 # 显示转换之后的图片
 ```
+
+![result](https://gitee.com/zr001/writeimges/raw/master/img/image-20201017214231901.png)
+
+在数字图像处理中，针对不同的图像格式有其特定的处理算法。所以，在做图像处理之前，我们需要考虑清楚自己要基于哪种格式的图像进行算法设计及其实现。
+
+对于`彩色图像`，不管其图像格式是PNG，还是BMP，或者JPG，在PIL中，使用Image模块的open()函数打开后，返回的图像对象的模式都是“`RGB`”。而对于`灰度图像`，不管其图像格式是PNG，还是BMP，或者JPG，打开后，其模式为“`L`”。
 
 
 
