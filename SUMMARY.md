@@ -29,6 +29,7 @@
   - [第三章Python程序结构](第三章Python程序结构.md)
   - [第四章Python使用变量](第四章Python使用变量.md)
 - [PythonQT5](pythonqt5.md)
+- [PythonLibrary](PythonLibrary.md)
+  - [Python sys](syslibrary.md)
+  - [Python PIL](PIL.md)
 
-- [Python sys](syslibrary.md)
-- 

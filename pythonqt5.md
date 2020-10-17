@@ -8446,19 +8446,25 @@
 
              
 
+            
+            
+            
+            
                     QCheckBox::indicator {
-              
+                  
                         subcontrol-origin: border;
-              
+                  
                         subcontrol-position: left center;
-              
+                  
                         background: white;
-              
+                  
                         border: 2px solid gray;
-              
-                    }
-
+            
+        
+        }
+            
              
+            
 
 
                     QCheckBox::indicator:checked {
@@ -8466,11 +8472,11 @@
                         background: rgb(76, 76, 76);
               
                     }
-
+    
           - QComboBox
-
+    
             QComboBox {
-
+    
                             color: gray;
                 
                             border: 6px solid lightgray;
@@ -8483,7 +8489,7 @@
 
 
             ​             
-
+    
                         QComboBox::drop-down {
                 
                             width: 15px;
@@ -8504,7 +8510,7 @@
 
 
             ​             
-
+    
                         QComboBox::drop-down:hover {
                 
                             background: lightgray;
@@ -8513,7 +8519,7 @@
 
 
             ​             
-
+    
                         QComboBox::drop-down:on {
                 
                             background: gray;
@@ -8523,30 +8529,30 @@
                             left: 1px;
                 
                         }
-
+    
           - ...
-
+    
     - 额外了解
-
+    
       - 渐变色
-
+    
         - 线性渐变
-
+    
           - qlineargradient(x1:0, y1:0, x2:1, y2:1,stop:0 white, stop: 0.4 gray, stop:1 green)
           - 图示
-
+    
         - 辐射渐变
-
+    
           - qradialgradient(cx:0.7, cy:0.7, radius:0.5, fx:0.5, fy:0.5, stop:0 red,  stop:1 orange)
           - 图示
-
+    
         - 角度渐变
-
+    
           - qconicalgradient(cx:0.5, cy:0.5, angle:10, stop:0 red, stop:1 orange)
           - 图示
-
+    
       - 更多属性描述
-
+    
         - https://doc.qt.io/qt-5/stylesheet-reference.html
 
 - 语法
@@ -8616,7 +8622,7 @@
 
 
       ​    
-
+    
           QPushButton:hover{
           
               color: qlineargradient(x1:0, y1:0, x2:1, y2:1,stop:0 white, stop: 0.4 green, stop:1 black);
@@ -8635,7 +8641,7 @@
 
 
       ​    
-
+    
           QPushButton:pressed{
           
               font-size: 26px;
@@ -9601,4 +9607,33 @@
 
         - 使用窗口
 
-## QQ群: 931363918
+# PyQt5 视频小计
+
+## GUI样式设置
+
+给项目文件统一设置字体样式`QObject.qss` ![image-20201012195035304](https://i.loli.net/2020/10/12/tOV7YTfHQwZJ4M2.png)
+
+- ```python
+  //QObject.qss 为同目录下创建的格式文件，
+  with open("QObject.qss", "r") as f:
+  	qApp.setStyleSheet(f.read())
+  ```
+  
+- 匹配的`QObject.qss` 
+
+  ```css
+  QLabel{
+  	font-size: 20px; color:red;
+  }
+  ```
+
+- 匹配了不同`ID`的`QObject.qss`,搭配`label.setObjectName("notice")`即可实现不同`ID`的对应 
+```css
+  QLabel#notice{
+  	font-size: 20px; color:red;
+}
+  ```
+- ![](https://gitee.com/zr001/writeimges/raw/master/img/20201014204603.png)
+![](https://gitee.com/zr001/writeimges/raw/master/img/20201014204719.png)
+- 
+
