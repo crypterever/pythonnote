@@ -264,7 +264,7 @@ resize(size, filter=None)=> image
 ```python
 @winnerzr
 	from PIL import Image  				# 调用库
-    im = Image.open("E:\demo.jpg")	   # 文件存在的路径 
+    im = Image.open("demo.jpg")	   # 文件存在的路径 
     im.show()							 # 显示图片
 ```
 
@@ -305,6 +305,8 @@ resize(size, filter=None)=> image
 #### new
 
 给定一副尺寸和模式的图片，如果省略`color`参数，则创建的图片被黑色填充满，如果`color`参数是`None`值，则图片还没初始化。
+
+使用给定的变量`mode`和`size`生成新的图像。`Size`是给定的宽/高二元组，这是按照像素数来计算的。对于单通道图像，变量`color`只给定一个值；对于多通道图像，变量`color`给定一个元组（每个通道对应一个值）。在版本`1.1.4`及其之后，用户也可以用颜色的名称，比如给变量`color`赋值为“`red`”。如果没有对变量`color`赋值，图像内容将会被全部赋值为`0`（为`黑色`）。如果变量`color`是空，图像将不会被初始化，即图像的内容全为`0`。这对向该图像复制或绘制某些内容是有用的。
 
 ```python
 from PIL import Image
@@ -361,6 +363,82 @@ plt.show()
 > | param color: | What color to use for the image. Default is black. If given, this should be a single integer or floating point value for single-band modes, and a tuple for multi-band modes (one value per band). When creating RGB images, you can also use color strings as supported by the ImageColor module. If the color is None, the image is not initialised. |
 > | returns:     | An[:py:class:`~PIL.Image.Image`](id1)object.                 |
 
+#### blend
+
+```python
+Image.blend(image1,image2, alpha) ⇒ image
+```
+
+使用给定的两张图像及透明度变量`alpha`，插值出一张新的图像。这两张图像必须有一样的尺寸和模式。
+
+> 合成公式为：`out = image1 (1.0 - alpha) + image2 alpha`
+
+若变量`alpha`为`0.0`，返回第一张图像的拷贝。若变量`alpha`为`1.0`，将返回第二张图像的拷贝。对变量`alpha`的值无限制。
+
+```python
+from PIL import Image
+im1 = Image.open("0000.jpg")
+im2 = Image.open("00001.jpg")
+print(im1.mode,im1.size)
+print(im2.mode,im2.size)
+im = Image.blend(im1, im2, 0.2)
+im.show()
+```
+
+> `补充透明度获取方法`（包括更改`透明度`）：
+>
+> ```python
+> from PIL import Image
+> 
+> img = Image.open("0000_switch.png")
+> img = img.convert('RGBA') # 修改颜色通道为RGBA
+> x, y = img.size # 获得长和宽
+> 
+> # # 设置每个像素点颜色的透明度
+> for i in range(x):
+>     for k in range(y):
+>         color = img.getpixel((i, k))
+>         color = color[:-1] + (0, )     # 将透明度设置为0
+>         img.putpixel((i, k), color)
+> 
+> img.save("0000_switch.png") # 要保存为.PNG格式的图片才可以
+> img2 = Image.open("0000_switch.png")
+> img2.show()
+> # color = img.getpixel((300,200)) 得到对应坐标的详细信息（R,G,B,alpha）
+> # print(color)
+> ```
+>
+> `输出`：![image-20201018161903307](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018161903307.png)
+
+#### merge
+
+```python
+Image.merge(mode,bands) ⇒ image
+```
+
+合并类使用一些单通道图像，创建一个新的图像。变量`bands`为一个图像的元组或者列表，每个通道的模式由变量`mode`描述。所有通道必须有相同的尺寸。
+变量`mode`与变量`bands`的关系：
+
+> `len(ImageMode.getmode(mode).bands)= len(bands)`
+
+```python
+from PIL import Image
+im1 = Image.open("0000.jpg")
+im2 = Image.open("0001.jpg")
+r1,g1,b1 = im1.split()
+r2,g2,b2 = im2.split()
+print(r1.mode,r1.size,g1.mode,g1.size)
+print(r2.mode,r2.size,g2.mode,g2.size)
+new_im=[r1,g2,b2]
+print(len(new_im))
+im_merge = Image.merge("RGB",new_im)
+im_merge.show()
+```
+
+![image-20201018163832803](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018163832803.png)
+
+![image-20201018163905692](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018163905692.png)
+
 ### Image类中的方法
 
 #### save
@@ -369,10 +447,10 @@ plt.show()
 
 ```python
 from PIL import Image
-im = Image.open("E:\demo.jpg")
+im = Image.open("demo.jpg")
 print(im)							  # 打印出原图片的详细信息
-im.save("E:\demo.png")              # 将"E:\mywife.jpg"保存为"E:\mywife.png"
-im = Image.open("E:\demo.png")   	# 打开新的png图片
+im.save("demo.png")              # 将"0000.jpg"保存为"0000.png"
+im = Image.open("demo.png")   	# 打开新的png图片
 print(im.format, im.size, im.mode)  # 打印出转换后图片的相关信息（这里是格式，大小，色彩模式）
 ```
 
@@ -568,3 +646,150 @@ print(im.palette)
 
 #### info
 
+```python
+im.info ==》dictionary
+```
+
+存储图像相关数据的字典。文件句柄使用该字典传递从文件中读取的各种非图像信息。大多数方法在返回新的图像时都会忽略这个字典；因为字典中的键并非标准化的，对于一个方法，它不能知道自己的操作如何影响这个字典。如果用户需要这些信息，需要在方法`open()`返回时保存这个字典。
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+print(im.info)
+```
+
+#### copy
+
+```python
+im.copy() ==>image
+```
+
+拷贝这个图像。如果用户想粘贴一些数据到这张图，可以使用这个方法，但是原始图像不会受到影响。
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+im_copy = im.copy() 
+```
+
+
+
+#### corp
+
+```python
+im.corp(box) ==> image
+```
+
+从当前的图像中返回一个矩形区域的拷贝。变量`box`是一个四元组，定义了左、上、右和下的像素坐标。用来表示在原始图像中截取的位置坐标，如`box(100,100,200,200)`就表示在原始图像中以左上角为坐标原点，截取一个`100*100`（像素为单位）的图像，为方便理解，如下为示意图`box（b1,a1,b2,a2）`。作图软件为`Visio2016`。这是一个懒操作。对源图像的改变可能或者可能不体现在裁减下来的图像中。为了获取一个分离的拷贝，对裁剪的拷贝调用方法`load()`。
+
+![image-20201018153138526](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018153138526.png)
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+box = (300, 100, 700, 700)              ##确定拷贝区域大小
+region = im.crop(box)                   ##将im表示的图片对象拷贝到region中，大小为box
+region.show()
+```
+
+#### paste
+
+```python
+im.paste(image,box)
+```
+
+将一张图粘贴到另一张图像上。变量`box`或者是一个给定左上角的2元组，或者是定义了左，上，右和下像素坐标的4元组，或者为空（与`（0，0）`一样）。如果给定`4`元组，被粘贴的图像的尺寸必须与区域尺寸一样。如果模式不匹配，被粘贴的图像将被转换为当前图像的模式。
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+box=[0,0,100,100]
+im_crop = im.crop(box)
+print(im_crop.size,im_crop.mode)
+im.paste(im_crop, (100,100))             ##(100,100,0,0)
+im.paste(im_crop, (400,400,500,500))
+im.show()
+```
+
+#### filter
+
+```python
+im.filter(filter) ==> image
+```
+
+返回一个使用给定滤波器处理过的图像的拷贝。具体参考图像滤波在`ImageFilter` 模块的应用，在该模块中，预先定义了很多增强滤波器，可以通过`filter()` 函数使用，预定义滤波器包括：`BLUR`、`CONTOUR`、`DETAIL`、`EDGE_ENHANCE`、`EDGE_ENHANCE_MORE`、`EMBOSS`、`FIND_EDGES`、`SMOOTH`、`SMOOTH_MORE`、`SHARPEN`。其中`BLUR`就是均值滤波，`CONTOUR`找轮廓，`FIND_EDGES`边缘检测，使用该模块时，需先导入。
+
+```python
+from PIL import Image
+from PIL import ImageFilter                         ## 调取ImageFilter
+imgF = Image.open("0000.jpg")
+bluF = imgF.filter(ImageFilter.BLUR)                ##均值滤波
+conF = imgF.filter(ImageFilter.CONTOUR)             ##找轮廓
+edgeF = imgF.filter(ImageFilter.FIND_EDGES)         ##边缘检测
+imgF.show()
+bluF.show()
+conF.show()
+edgeF.show()
+```
+
+#### split
+
+```python
+im.split() ⇒ sequence
+```
+
+返回当前图像各个通道组成的一个元组。例如，分离一个“`RGB`”图像将产生三个新的图像，分别对应原始图像的每个通道（红，绿，蓝）。
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+r,g,b = im.split()
+print(r.mode)
+print(r.size)
+print(im.size)
+r.show()
+# g.show()
+# b.show()
+```
+
+![image-20201018162629568](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018162629568.png)
+
+#### rotate
+
+```python
+im.rotate(angle) ⇒ image
+im.rotate(angle,filter=NEAREST, expand=0) ⇒ image
+```
+
+返回一个按照给定角度顺时钟围绕图像中心旋转后的图像拷贝。变量`filter`是`NEAREST`、`BILINEAR`或者`BICUBIC`之一。如果省略该变量，或者图像模式为“`1`”或者“`P`”，则默认为`NEAREST`。变量`expand`，如果为`true`，表示输出图像足够大，可以装载旋转后的图像。如果为`false`或者`缺省`，则输出图像与输入图像尺寸一样大。
+
+```python
+from PIL import Image
+im = Image.open("0000.jpg")
+im_45 = im.rotate(45)
+im_30 = im.rotate(30, Image.NEAREST,1)
+print(im_45.size,im_30.size)
+im_45.show()
+im_30.show()
+```
+
+#### seek
+
+```python
+im.seek(frame)
+```
+
+在给定的文件序列中查找指定的帧。如果查找超越了序列的末尾，则产生一个`EOFError`异常。当文件序列被打开时，`PIL`库自动指定到`第0帧`上。
+
+```python
+from PIL import Image
+im_gif = Image.open("0000.gif")
+print(im_gif.mode)
+im_gif.show()    ##第0帧
+im_gif.seek(3)
+im_gif.show()
+im_gif.seek(9)
+im_gif.show()
+```
+
+![image-20201018164739066](https://gitee.com/zr001/writeimges/raw/master/img/image-20201018164739066.png)
