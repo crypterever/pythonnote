@@ -643,21 +643,24 @@
 </code></pre>
 <h3 id="&#x6A21;&#x5F0F;&#xFF08;mode&#xFF09;"><a name="&#x6A21;&#x5F0F;&#xFF08;mode&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x5F0F;&#xFF08;mode&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5F0F;&#xFF08;<code>mode</code>&#xFF09;</h3>
 <p>&#x56FE;&#x50CF;&#x7684;&#x6A21;&#x5F0F;&#x5B9A;&#x4E49;&#x4E86;&#x56FE;&#x50CF;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x50CF;&#x7D20;&#x7684;&#x4F4D;&#x5BBD;&#x3002;&#x5F53;&#x524D;&#x652F;&#x6301;&#x5982;&#x4E0B;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<blockquote>
+<p>getpixel(0,0)[<code>&#x5750;&#x6807;</code>]</p>
+</blockquote>
 <table>
 <thead>
 <tr>
 <th style="text-align:left">1</th>
-<th>1&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x8868;&#x793A;&#x9ED1;&#x548C;&#x767D;&#xFF0C;&#x4F46;&#x662F;&#x5B58;&#x50A8;&#x7684;&#x65F6;&#x5019;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x5B58;&#x50A8;&#x4E3A;8bit</th>
+<th>1&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x8868;&#x793A;&#x9ED1;&#x548C;&#x767D;&#xFF0C;&#x4F46;&#x662F;&#x5B58;&#x50A8;&#x7684;&#x65F6;&#x5019;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x5B58;&#x50A8;&#x4E3A;8bit,<code>&#x6A21;&#x5F0F;&#x201C;1&#x201D;&#x4E3A;&#x4E8C;&#x503C;&#x56FE;&#x50CF;&#xFF0C;&#x975E;&#x9ED1;&#x5373;&#x767D;&#x3002;&#x4F46;&#x662F;&#x5B83;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x7528;8&#x4E2A;bit&#x8868;&#x793A;&#xFF0C;0&#x8868;&#x793A;&#x9ED1;&#xFF0C;255&#x8868;&#x793A;&#x767D;&#x3002;</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">L</td>
-<td>8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x8868;&#x793A;&#x9ED1;&#x548C;&#x767D;&#x3002;</td>
+<td><code>1&#x6A21;&#x5F0F;&#x4E5F;&#x662F;&#x516B;&#x4F4D;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#xFF0C;&#x53EA;&#x662F;&#x503C;&#x4E0D;&#x662F;0&#x5C31;&#x662F;255&#xFF0C;&#x975E;&#x9ED1;&#x5373;&#x767D; L&#x6A21;&#x5F0F;&#x516B;&#x4F4D;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#xFF0C;&#x503C;&#x9664;&#x4E86;&#x6709;0&#x548C;255&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x4E2D;&#x95F4;&#x503C;&#x8868;&#x793A;&#x7070;&#x8272;&#xFF0C;&#x6240;&#x4EE5;&#x79F0;&#x4E3A;&#x7070;&#x5EA6;&#x6A21;&#x5F0F;(L = R * 299/1000 + G * 587/1000+ B * 114/1000)</code></td>
 </tr>
 <tr>
 <td style="text-align:left">P</td>
-<td>8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x4F7F;&#x7528;&#x8C03;&#x8272;&#x677F;&#x6620;&#x5C04;&#x5230;&#x5176;&#x4ED6;&#x6A21;&#x5F0F;&#x3002;<strong>1&#x6A21;&#x5F0F;&#x4E5F;&#x662F;&#x516B;&#x4F4D;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#xFF0C;&#x53EA;&#x662F;&#x503C;&#x4E0D;&#x662F;0&#x5C31;&#x662F;255&#xFF0C;&#x975E;&#x9ED1;&#x5373;&#x767D; L&#x6A21;&#x5F0F;&#x516B;&#x4F4D;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#xFF0C;&#x503C;&#x9664;&#x4E86;&#x6709;0&#x548C;255&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x4E2D;&#x95F4;&#x503C;&#x8868;&#x793A;&#x7070;&#x8272;&#xFF0C;&#x6240;&#x4EE5;&#x79F0;&#x4E3A;&#x7070;&#x5EA6;&#x6A21;&#x5F0F;</strong></td>
+<td>8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x4F7F;&#x7528;&#x8C03;&#x8272;&#x677F;&#x6620;&#x5C04;&#x5230;&#x5176;&#x4ED6;&#x6A21;&#x5F0F;&#x3002;</td>
 </tr>
 <tr>
 <td style="text-align:left">RGB</td>
@@ -669,15 +672,15 @@
 </tr>
 <tr>
 <td style="text-align:left">CMYK</td>
-<td>4x8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x989C;&#x8272;&#x5206;&#x79BB;&#x3002;</td>
+<td>4x8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x989C;&#x8272;&#x5206;&#x79BB;&#x3002;&#x6A21;&#x5F0F;&#x201C;CMYK&#x201D;&#x4E3A;32&#x4F4D;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x7528;32&#x4E2A;bit&#x8868;&#x793A;&#x3002;&#x6A21;&#x5F0F;&#x201C;CMYK&#x201D;&#x5C31;&#x662F;&#x5370;&#x5237;&#x56DB;&#x5206;&#x8272;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x662F;&#x5F69;&#x8272;&#x5370;&#x5237;&#x65F6;&#x91C7;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x5957;&#x8272;&#x6A21;&#x5F0F;&#xFF0C;&#x5229;&#x7528;&#x8272;&#x6599;&#x7684;&#x4E09;&#x539F;&#x8272;&#x6DF7;&#x8272;&#x539F;&#x7406;&#xFF0C;&#x52A0;&#x4E0A;&#x9ED1;&#x8272;&#x6CB9;&#x58A8;&#xFF0C;&#x5171;&#x8BA1;&#x56DB;&#x79CD;&#x989C;&#x8272;&#x6DF7;&#x5408;&#x53E0;&#x52A0;&#xFF0C;&#x5F62;&#x6210;&#x6240;&#x8C13;&#x201C;&#x5168;&#x5F69;&#x5370;&#x5237;&#x201D;&#x3002;<br>&#x56DB;&#x79CD;&#x6807;&#x51C6;&#x989C;&#x8272;&#x662F;&#xFF1A;C&#xFF1A;Cyan = &#x9752;&#x8272;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x2018;&#x5929;&#x84DD;&#x8272;&#x2019;&#x6216;&#x662F;&#x2018;&#x6E5B;&#x84DD;&#x2019;M&#xFF1A;Magenta = &#x54C1;&#x7EA2;&#x8272;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x2018;&#x6D0B;&#x7EA2;&#x8272;&#x2019;&#xFF1B;Y&#xFF1A;Yellow = &#x9EC4;&#x8272;&#xFF1B;K&#xFF1A;Key Plate(blacK) = &#x5B9A;&#x4F4D;&#x5957;&#x7248;&#x8272;&#xFF08;&#x9ED1;&#x8272;&#xFF09;&#x3002;<br>C = 255 - R<br>M = 255 - G<br>Y = 255 - B<br>K = 0</td>
 </tr>
 <tr>
 <td style="text-align:left">YCbCr</td>
-<td>3x8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x5F69;&#x8272;&#x89C6;&#x9891;&#x683C;&#x5F0F;&#x3002;</td>
+<td>3x8&#x4F4D;&#x50CF;&#x7D20;&#xFF0C;&#x5F69;&#x8272;&#x89C6;&#x9891;&#x683C;&#x5F0F;&#x3002;&#x6A21;&#x5F0F;&#x201C;YCbCr&#x201D;&#x4E3A;24&#x4F4D;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x7528;24&#x4E2A;bit&#x8868;&#x793A;&#x3002;YCbCr&#x5176;&#x4E2D;Y&#x662F;&#x6307;&#x4EAE;&#x5EA6;&#x5206;&#x91CF;&#xFF0C;Cb&#x6307;&#x84DD;&#x8272;&#x8272;&#x5EA6;&#x5206;&#x91CF;&#xFF0C;&#x800C;Cr&#x6307;&#x7EA2;&#x8272;&#x8272;&#x5EA6;&#x5206;&#x91CF;&#x3002;&#x4EBA;&#x7684;&#x8089;&#x773C;&#x5BF9;&#x89C6;&#x9891;&#x7684;Y&#x5206;&#x91CF;&#x66F4;&#x654F;&#x611F;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x901A;&#x8FC7;&#x5BF9;&#x8272;&#x5EA6;&#x5206;&#x91CF;&#x8FDB;&#x884C;&#x5B50;&#x91C7;&#x6837;&#x6765;&#x51CF;&#x5C11;&#x8272;&#x5EA6;&#x5206;&#x91CF;&#x540E;&#xFF0C;&#x8089;&#x773C;&#x5C06;&#x5BDF;&#x89C9;&#x4E0D;&#x5230;&#x7684;&#x56FE;&#x50CF;&#x8D28;&#x91CF;&#x7684;&#x53D8;&#x5316;&#x3002;<br>&#x6A21;&#x5F0F;&#x201C;RGB&#x201D;&#x8F6C;&#x6362;&#x4E3A;&#x201C;YCbCr&#x201D;&#x7684;&#x516C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>Cb&#xFF1A;&#x53CD;&#x6620;&#x7684;&#x662F;RGB&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x84DD;&#x8272;&#x90E8;&#x5206;&#x4E0E;RGB&#x4FE1;&#x53F7;&#x4EAE;&#x5EA6;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x3002;<br>Cr&#xFF1A;&#x53CD;&#x6620;&#x4E86;RGB&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7EA2;&#x8272;&#x90E8;&#x5206;&#x4E0E;RGB&#x4FE1;&#x53F7;&#x4EAE;&#x5EA6;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x3002;<br></td>
 </tr>
 <tr>
 <td style="text-align:left">I</td>
-<td>32&#x4F4D;&#x6574;&#x578B;&#x50CF;&#x7D20;&#x3002;</td>
+<td>&#x6A21;&#x5F0F;&#x201C;<code>I</code>&#x201D;&#x4E3A;32&#x4F4D;&#x6574;&#x578B;&#x7070;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x7528;32&#x4E2A;bit&#x8868;&#x793A;&#xFF0C;0&#x8868;&#x793A;&#x9ED1;&#xFF0C;255&#x8868;&#x793A;&#x767D;&#xFF0C;(0,255)&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x5B57;&#x8868;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x7070;&#x5EA6;&#x3002;I = R <em> 299/1000 + G </em> 587/1000 + B * 114/1000<br>&#x6A21;&#x5F0F;&#x201C;I&#x201D;&#x4E0E;&#x6A21;&#x5F0F;&#x201C;L&#x201D;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x6A21;&#x5F0F;&#x201C;L&#x201D;&#x7684;&#x50CF;&#x7D20;&#x662F;8bit&#xFF0C;&#x800C;&#x6A21;&#x5F0F;&#x201C;I&#x201D;&#x7684;&#x50CF;&#x7D20;&#x662F;32bit&#x3002;</td>
 </tr>
 <tr>
 <td style="text-align:left">F</td>
@@ -757,7 +760,7 @@
 </code></pre>
 <pre><code class="lang-python">&#x7A0B;&#x5E8F;&#xFF1A;<span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
      im= Image.open(<span class="hljs-string">&apos;D:\\Code\\Python\\test\\img\\1.jpg&apos;</span>)
-     im.size
+     print(im.size)
 
 &#x8F93;&#x51FA;&#xFF1A;(<span class="hljs-number">800</span>, <span class="hljs-number">450</span>)
 
@@ -1023,6 +1026,11 @@ save(fp, quality)
 </tbody>
 </table>
 </blockquote>
+<h4 id="mode"><a name="mode" class="anchor-navigation-ex-anchor" href="#mode"><i class="fa fa-link" aria-hidden="true"></i></a>mode</h4>
+<p>&#x56FE;&#x50CF;&#x7684;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">im.mode ==&gt; string
+</code></pre>
+<p>&#x56FE;&#x50CF;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5E38;&#x89C1;&#x7684;<code>mode</code>&#x6709;&#x201C;<code>L</code>&#x201D;&#x8868;&#x793A;&#x7070;&#x5EA6;&#x56FE;&#x50CF;&#xFF0C;&#x201C;<code>RGB</code>&#x201D;&#x8868;&#x793A;&#x771F;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x201C;<code>CMYK</code>&#x201D;&#x8868;&#x793A;&#x51FA;&#x7248;&#x56FE;&#x50CF;&#xFF0C;&#x8868;&#x793A;&#x56FE;&#x50CF;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x50CF;&#x7D20;&#x683C;&#x5F0F;&#xFF0C;&#x89C1;</p>
 <h4 id="convert"><a name="convert" class="anchor-navigation-ex-anchor" href="#convert"><i class="fa fa-link" aria-hidden="true"></i></a>convert</h4>
 <p>&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#x5E76;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
@@ -1032,6 +1040,7 @@ print(new_im.mode)             <span class="hljs-comment"># &#x6253;&#x5370;&#x5
 new_im.show()                 <span class="hljs-comment"># &#x663E;&#x793A;&#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x56FE;&#x7247;</span>
 </code></pre>
 <p><img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201017214231901.png" alt="result"></p>
+<p><img src="https://gitee.com/zr001/writeimges/raw/master/img/demo.png" alt="demo"></p>
 <p>&#x5728;&#x6570;&#x5B57;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x4E2D;&#xFF0C;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x6709;&#x5176;&#x7279;&#x5B9A;&#x7684;&#x5904;&#x7406;&#x7B97;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x505A;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8003;&#x8651;&#x6E05;&#x695A;&#x81EA;&#x5DF1;&#x8981;&#x57FA;&#x4E8E;&#x54EA;&#x79CD;&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7B97;&#x6CD5;&#x8BBE;&#x8BA1;&#x53CA;&#x5176;&#x5B9E;&#x73B0;&#x3002;</p>
 <p>&#x5BF9;&#x4E8E;<code>&#x5F69;&#x8272;&#x56FE;&#x50CF;</code>&#xFF0C;&#x4E0D;&#x7BA1;&#x5176;&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x662F;PNG&#xFF0C;&#x8FD8;&#x662F;BMP&#xFF0C;&#x6216;&#x8005;JPG&#xFF0C;&#x5728;PIL&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;Image&#x6A21;&#x5757;&#x7684;open()&#x51FD;&#x6570;&#x6253;&#x5F00;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x56FE;&#x50CF;&#x5BF9;&#x8C61;&#x7684;&#x6A21;&#x5F0F;&#x90FD;&#x662F;&#x201C;<code>RGB</code>&#x201D;&#x3002;&#x800C;&#x5BF9;&#x4E8E;<code>&#x7070;&#x5EA6;&#x56FE;&#x50CF;</code>&#xFF0C;&#x4E0D;&#x7BA1;&#x5176;&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x662F;PNG&#xFF0C;&#x8FD8;&#x662F;BMP&#xFF0C;&#x6216;&#x8005;JPG&#xFF0C;&#x6253;&#x5F00;&#x540E;&#xFF0C;&#x5176;&#x6A21;&#x5F0F;&#x4E3A;&#x201C;<code>L</code>&#x201D;&#x3002;</p>
 <blockquote>
@@ -1091,8 +1100,49 @@ colors=<span class="hljs-number">256</span>
 </tbody>
 </table>
 </blockquote>
+<h4 id="format"><a name="format" class="anchor-navigation-ex-anchor" href="#format"><i class="fa fa-link" aria-hidden="true"></i></a>format</h4>
+<pre><code class="lang-python">im.format==&gt; string <span class="hljs-keyword">or</span> none
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x56FE;&#x50CF;&#x6765;&#x6E90;&#xFF0C;&#x5982;&#x679C;&#x56FE;&#x50CF;&#x4E0D;&#x662F;&#x4ECE;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x5B83;&#x7684;&#x503C;&#x5C31;&#x662F;<code>None</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;0000.jpg&quot;</span>)
+print(im.format)           <span class="hljs-comment"># &#x6253;&#x5370;&#x51FA;&#x683C;&#x5F0F;&#x4FE1;&#x606F;</span>
+im.show()
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<p><img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201018104928809.png" alt="image-20201018104928809"></p>
+<h4 id="size"><a name="size" class="anchor-navigation-ex-anchor" href="#size"><i class="fa fa-link" aria-hidden="true"></i></a>size</h4>
+<pre><code class="lang-python">im.size ==&gt; (width, height)
+</code></pre>
+<p>&#x56FE;&#x50CF;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x6309;&#x7167;&#x50CF;&#x7D20;&#x6570;&#x8BA1;&#x7B97;&#xFF0C;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x7684;&#x4E8C;&#x5143;&#x7EC4;&#xFF08;<code>width</code>&#xFF0C;<code>height</code>&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;0000.jpg&quot;</span>)
+print(im.size)                <span class="hljs-comment"># &#x6253;&#x5370;&#x51FA;&#x5C3A;&#x5BF8;&#x4FE1;&#x606F;</span>
+im.show()
+</code></pre>
+<h4 id="palette"><a name="palette" class="anchor-navigation-ex-anchor" href="#palette"><i class="fa fa-link" aria-hidden="true"></i></a>palette</h4>
+<pre><code class="lang-python">im.palette ==&gt; palette <span class="hljs-keyword">or</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x989C;&#x8272;&#x8C03;&#x8272;&#x677F;&#x8868;&#x683C;&#x3002;&#x5982;&#x679C;&#x56FE;&#x50CF;&#x7684;&#x6A21;&#x5F0F;&#x662F;&#x201C;P&#x201D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;ImagePalette&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x5C06;&#x4E3A;None&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;.jpg&quot;</span>)
+print(im.palette)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;<img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201018110130581.png" alt="image-20201018110130581"></p>
+<blockquote>
+<p>&#x5BF9;&#x56FE;&#x50CF;&#x8FDB;&#x884C;<code>convert</code>&#x4E4B;&#x540E;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+im = Image.open(<span class="hljs-string">&quot;0000.jpg&quot;</span>)
+print(im.palette) 
+new_im = im.convert(<span class="hljs-string">&apos;P&apos;</span>)
+print(new_im.mode)
+print(new_im.palette)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;<img src="https://gitee.com/zr001/writeimges/raw/master/img/image-20201018110353455.png" alt="image-20201018110353455"></p>
+</blockquote>
+<h4 id="info"><a name="info" class="anchor-navigation-ex-anchor" href="#info"><i class="fa fa-link" aria-hidden="true"></i></a>info</h4>
 <p><footer class="page-footer"><span class="copyright">&#xA9; by Winnerzr all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x6863;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-10-17 22:37:30
+2020-10-18 11:42:36
 </span></footer></p>
 <div id="gitalk-container"></div>
                                 
@@ -1133,7 +1183,7 @@ colors=<span class="hljs-number">256</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python PIL","level":"1.5.2","depth":2,"previous":{"title":"Python sys","level":"1.5.1","depth":2,"path":"syslibrary.md","ref":"syslibrary.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"PIL.md","mtime":"2020-10-17T14:37:30.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-17T14:38:04.692Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Python PIL","level":"1.5.2","depth":2,"previous":{"title":"Python sys","level":"1.5.1","depth":2,"path":"syslibrary.md","ref":"syslibrary.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"large"},{"user":"WINNERZR01","type":"follow","width":"230","count":false}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"PIL.md","mtime":"2020-10-18T03:42:36.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-18T07:20:36.181Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
