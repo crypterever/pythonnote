@@ -32,4 +32,7 @@
 - [PythonLibrary](PythonLibrary.md)
   - [Python sys](syslibrary.md)
   - [Python PIL](PIL.md)
+- [PythonArduino](PythonArduino.md)
+- [PythonConda](conda.md)
 
+- [PythonMachineLearn](PythonMachineLearn.md)
