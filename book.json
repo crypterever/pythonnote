@@ -16,7 +16,15 @@
         "favicon",
         "mygitalk",
         "code",
-        "hide-element"
+        "hide-element",
+        "insert-logo",
+        "-lunr", 
+        "-search", 
+        "search-pro",
+        "pageview-count",
+        "popup",
+        "-sharing",
+        "sharing-plus"
     ],
     "pluginsConfig": {
         "donate": {
@@ -73,5 +81,22 @@
         },
         "hide-element": {
             "elements": [".gitbook-link"]
-        }
+        },
+        "insert-logo": {
+            "url": "https://gitee.com/zr001/writeimges/raw/master/img/book_38.461538461538px_1287379_easyicon.net.png",
+            "style": "background: none; max-height: 32px; min-height: 32px"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "twitter": false,
+            "weibo": true,
+         "all": [
+            "qq", "qzone","weibo"              
+            ]
+      }
 }}
