@@ -115,11 +115,90 @@ pip install -U scikit-learn
 
 > ![image-20201108103719325](https://gitee.com/zr001/writeimges/raw/master/img/image-20201108103719325.png)
 
+### 1.1广义线性模型：
+
+官网实例（翻译）：
+
+`Linear Regression Example`：
+
+本例仅使用糖尿病数据集的第一个特征，以说明这种回归技术的二维图。在图中可以看到直线，显示了线性回归如何试图画出一条直线，使数据集中观察到的反应与线性近似预测的反应之间的残差平方和最小化。
+
+还计算了系数、残差平方和和确定系数。
+
+`Out`:
+
+![image-20201108172152611](https://gitee.com/zr001/writeimges/raw/master/img/image-20201108172152611.png)
+
+```markdown
+Coefficients:
+ [938.23786125]
+Mean squared error: 2548.07 //均方差
+Coefficient of determination: 0.47
+```
+
+```python
+print(__doc__)
+
+
+# Code source: Jaques Grobler
+# License: BSD 3 clause
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Load the diabetes dataset
+# 加载糖尿病数据集
+diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+
+# Use only one feature
+# 仅使用一个特征
+diabetes_X = diabetes_X[:, np.newaxis, 2]
+
+# Split the data into training/testing sets
+diabetes_X_train = diabetes_X[:-20]
+diabetes_X_test = diabetes_X[-20:]
+
+# Split the targets into training/testing sets
+diabetes_y_train = diabetes_y[:-20]
+diabetes_y_test = diabetes_y[-20:]
+
+# Create linear regression object
+regr = linear_model.LinearRegression()
+
+# Train the model using the training sets
+regr.fit(diabetes_X_train, diabetes_y_train)
+
+# Make predictions using the testing set
+diabetes_y_pred = regr.predict(diabetes_X_test)
+
+# The coefficients
+print('Coefficients: \n', regr.coef_)
+# The mean squared error
+print('Mean squared error: %.2f'
+      % mean_squared_error(diabetes_y_test, diabetes_y_pred))
+# The coefficient of determination: 1 is perfect prediction
+print('Coefficient of determination: %.2f'
+      % r2_score(diabetes_y_test, diabetes_y_pred))
+
+# Plot outputs
+# 绘图输出
+plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
+plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
+
+plt.xticks(())
+plt.yticks(())
+
+plt.show()
+```
+
+
+
 ## 无监督学习：
 
 > ![image-20201108103636628](https://gitee.com/zr001/writeimges/raw/master/img/image-20201108103636628.png)![image-20201108103922998](https://gitee.com/zr001/writeimges/raw/master/img/image-20201108103922998.png)
-
-### 广义线性模型：
 
 # 数学知识积累
 
