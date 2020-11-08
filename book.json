@@ -15,8 +15,21 @@
         "splitter",
         "favicon",
         "mygitalk",
-        "code"
+        "code",
+        "hide-element",
+        "theme-fexa"
     ],
+    "variables": {
+        "themeFexa":{
+            "nav":[
+                {
+                    "url":"https://zr001.gitee.io/zr001/",
+                    "target":"_blank",
+                    "name": "MyBlog"
+                }
+            ]
+        }
+    },
     "pluginsConfig": {
         "donate": {
             "wechat": "https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif",
@@ -74,5 +87,13 @@
                 "width": "230",
                 "count": false
               }]
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+        "theme-fexa":{
+            "search-placeholder":"输入关键字搜索", 
+            "logo":"https://gitee.com/zr001/writeimges/raw/master/img/favicon.png", 
+            "favicon": "./favicon.ico" 
         }
 }}
