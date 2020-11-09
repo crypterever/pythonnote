@@ -24,7 +24,8 @@
         "pageview-count",
         "popup",
         "-sharing",
-        "sharing-plus"
+        "sharing-plus",
+        "popup"
     ],
     "pluginsConfig": {
         "donate": {

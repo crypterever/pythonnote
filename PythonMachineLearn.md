@@ -440,6 +440,8 @@ print dist.pdist(matV,'jaccard')
 
 ![image-20201109215632776](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215632776.png)
 
+
+
 ## 回归（Regression）
 
 > 回归问题是针对于连续型变量的。
@@ -456,7 +458,7 @@ print dist.pdist(matV,'jaccard')
 
 **回归通俗一点就是，对已经存在的点（训练数据）进行分析，拟合出适当的函数模型y=f(x)，这里y就是数据的标签，而对于一个新的自变量x，通过这个函数模型得到标签y。** 
 
-## 分类(Classification)
+## 分类（Classification）
 
 > 和回归最大的区别在于，分类是针对离散型的，输出的结果是有限的。
 
