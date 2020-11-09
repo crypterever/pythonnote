@@ -202,7 +202,245 @@ plt.show()
 
 # 数学知识积累
 
-## 回归(Regression)
+## [经验贴](https://zhuanlan.zhihu.com/p/25197792)
+
+### 线性代数
+
+#### 1-1、标量
+
+一个标量就是一个单独的数，一般用小写的变量名称表示。
+
+#### 1-2、向量
+
+一个向量就是一列数，这些数是有序排列的。用过次序中的索引，我们可以确定每个单独的数。通常会赋予向量粗体的小写名称。当我们需要明确表示向量中的元素时，我们会将元素排列成一个方括号包围的纵柱：![image-20201109193619958](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109193619958.png)
+
+我们可以把向量看作空间中的点，每个元素是不同的坐标轴上的坐标。
+
+#### 1-3、矩阵
+
+矩阵是二维数组，其中的每一个元素被两个索引而非一个所确定。我们通常会赋予矩阵粗体的大写变量名称，比如A。 如果一个实数矩阵高度为m，宽度为n，那么我们说
+$$
+A\epsilon R^{m*n}
+$$
+![image-20201109195916741](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109195916741.png)
+
+矩阵这东西在机器学习中就不要太重要了！实际上，如果我们现在有N个用户的数据，每条数据含有M个特征，那其实它对应的就是一个NM的矩阵呀；再比如，一张图由16x16的像素点组成，那这就是一个16x16的矩阵了。现在才发现，我们大一学的矩阵原理原来这么的有用！要是当时老师讲课的时候先普及一下，也不至于很多同学学矩阵的时候觉得莫名其妙了。
+
+#### 1-4、张量
+
+几何代数中定义的张量是基于向量和矩阵的推广，通俗一点理解的话，我们可以将标量视为零阶张量，矢量视为一阶张量，那么矩阵就是二阶张量。
+
+例如，可以将任意一张彩色图片表示成一个三阶张量，三个维度分别是图片的高度、宽度和色彩数据。将这张图用张量表示出来，就是最下方的那张表格：
+
+![image-20201109200618732](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109200618732.png)
+
+其中表的横轴表示图片的宽度值，这里只截取0~319；表的纵轴表示图片的高度值，这里只截取0~4；表格中每个方格代表一个像素点，比如第一行第一列的表格数据为[1.0,1.0,1.0]，代表的就是RGB三原色在图片的这个位置的取值情况（即R=1.0，G=1.0，B=1.0）。
+
+当然我们还可以将这一定义继续扩展，即：我们可以用四阶张量表示一个包含多张图片的数据集，这四个维度分别是：图片在数据集中的编号，图片高度、宽度，以及色彩数据。
+
+张量在深度学习中是一个很重要的概念，因为它是一个深度学习框架中的一个核心组件，后续的所有运算和优化算法几乎都是基于张量进行的。
+
+#### 1-5、范数
+
+有时我们需要衡量一个向量的大小。在机器学习中，我们经常使用被称为范数(`norm`) 的函数衡量矩阵大小。`Lp` 范数如下：![image-20201109201440374](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109201440374.png)
+
+所以：
+
+![image-20201109201501416](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109201501416.png)
+
+这里先说明一下，在机器学习中，L1范数和L2范数很常见，主要用在损失函数中起到一个限制模型参数复杂度的作用，至于为什么要限制模型的复杂度，这又涉及到机器学习中常见的过拟合问题。具体的概念在后续文章中会有详细的说明和推导，大家先记住：这个东西很重要，实际中经常会涉及到，面试中也常会被问到！！！
+
+#### 1-6、特征分解
+
+![image-20201109201650022](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109201650022.png)
+
+#### 1-7、奇异值分解（Singular Value Decomposition，SVD）
+
+![image-20201109202744869](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109202744869.png)
+
+#### 1-8、Moore-Penrose伪逆
+
+![image-20201109202818756](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109202818756.png)
+
+#### 1-9、几种常用的距离
+
+![image-20201109203035988](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109203035988.png)
+
+##### 1、曼哈顿距离
+
+![image-20201109203106226](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109203106226.png)
+
+```python
+from numpy import *
+vector1 = mat([1,2,3])
+vector2 = mat([4,5,6])
+print sum(abs(vector1-vector2))
+```
+
+##### 2、欧氏距离
+
+![](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109203254754.png)
+
+```python
+from numpy import *
+vector1 = mat([1,2,3])
+vector2 = mat([4,5,6])
+print sqrt((vector1-vector2)*(vector1-vector2).T)
+```
+
+##### 3、闵可夫斯基距离
+
+![image-20201109204218838](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109204218838.png)
+
+##### 4、切比雪夫距离
+
+![image-20201109204250549](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109204250549.png)
+
+```python
+from numpy import *
+vector1 = mat([1,2,3])
+vector2 = mat([4,5,6])
+print sqrt(abs(vector1-vector2).max)
+```
+
+##### 5、夹角余弦
+
+![image-20201109205357680](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109205357680.png)
+
+```python
+from numpy import *
+vector1 = mat([1,2,3])
+vector2 = mat([4,5,6])
+print dot(vector1,vector2)/(linalg.norm(vector1)*linalg.norm(vector2))
+```
+
+##### 6、汉明距离
+
+![image-20201109205501094](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109205501094.png)
+
+```python
+from numpy import *
+matV = mat([1,1,1,1],[1,0,0,1])
+smstr = nonzero(matV[0]-matV[1])
+print smstr
+```
+
+##### 7、杰卡德相似系数
+
+![image-20201109205610523](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109205610523.png)
+
+##### 8、杰卡德距离
+
+![image-20201109205854905](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109205854905.png)
+
+```python
+from numpy import *
+import scipy.spatial.distance as dist
+matV = mat([1,1,1,1],[1,0,0,1])
+print dist.pdist(matV,'jaccard')
+```
+
+### 概率
+
+#### 3-1、使用概率的原因
+
+![image-20201109210342674](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109210342674.png)
+
+#### 3-2、随机变量
+
+![image-20201109210523150](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109210523150.png)
+
+#### 3-3、概率分布
+
+![image-20201109210610192](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109210610192.png)
+
+#### 3-4、条件概率
+
+![image-20201109210642625](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109210642625.png)
+
+#### 3-5、贝叶斯公式
+
+![image-20201109211217115](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109211217115.png)
+
+期望、方差、协方差等主要反映数据的统计特征，机器学习的一个很大应用就是数据挖掘等，因此这些基本的统计概念也是很有必要掌握。另外，像后面的EM算法中，就需要用到期望的相关概念和性质。
+
+#### 3-6、期望
+
+![image-20201109212258020](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212258020.png)
+
+#### 3-7、方差
+
+![image-20201109212314823](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212314823.png)
+
+#### 3- 8、协方差
+
+![image-20201109212335780](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212335780.png)
+
+#### 3-9、常见分布函数
+
+##### 1.	0-1分布
+
+0-1分布是单个二值型离散随机变量的分布，其概率分布函数为：
+
+![image-20201109212532407](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212532407.png)
+
+##### 2.	几何分布
+
+![image-20201109212611001](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212611001.png)
+
+##### 3.	二项分布
+
+![image-20201109212646249](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212646249.png)
+
+##### 4.	高斯分布
+
+![image-20201109212711776](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212711776.png)
+
+##### 5.	指数分布
+
+![image-20201109212903435](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109212903435.png)
+
+##### 6.泊松分布
+
+![image-20201109213152457](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109213152457.png)
+
+#### 3-10、Lagrange乘子法
+
+![image-20201109214940563](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109214940563.png)
+
+#### 3-11、最大似然估计
+
+![image-20201109215111878](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215111878.png)
+
+### 信息论
+
+信息论本来是通信中的概念，但是其核心思想“熵”在机器学习中也得到了广泛的应用。比如决策树模型ID3，C4.5中是利用**信息增益**来划分特征而生成一颗决策树的，而信息增益就是基于这里所说的**熵**。所以它的重要性也是可想而知。
+
+#### 4-1、熵
+
+![image-20201109215308657](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215308657.png)
+
+#### 4-2、联合熵
+
+![image-20201109215336679](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215336679.png)
+
+#### 4-3、条件熵
+
+![image-20201109215502406](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215502406.png)
+
+#### 4-4、相对熵
+
+![image-20201109215538240](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215538240.png)
+
+#### 4-5、互信息
+
+![image-20201109215602775](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215602775.png)
+
+#### 4-6、最大熵模型
+
+![image-20201109215632776](https://gitee.com/zr001/writeimges/raw/master/img/image-20201109215632776.png)
+
+## 回归（Regression）
 
 > 回归问题是针对于连续型变量的。
 

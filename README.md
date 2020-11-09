@@ -7,12 +7,10 @@
 ### Welcome to star and fork.
 
 - ***My hexo blog is [Winnerzr](https://zr001.gitee.io/zr001/).***
-
 - ***My github link [Winnerzr](https://github.com/WINNERZR01).***
-
 - ***It is a book powered by [GitBook](https://github.com/GitbookIO/gitbook).***
-
-- ***The software used in the experiment is [python](https://www.python.org/)***
+- ***The software used in the experiment is [python](https://www.python.org/).***
+- ***All resources come from the network, do not assume any responsibility, the author just to organize the collection, refused to sell.***
 
 *Your support is the driving force of my creation.*
 
