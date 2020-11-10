@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TPYBoard v202 舵机的基本介绍 · 我的python笔记本</title>
+        <title>IpythonMagic · 我的python笔记本</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -95,10 +95,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="TPYBoard v202 I2C操作DS3231时钟模块.html" />
     
-    
-    <link rel="prev" href="TPYBoard v202 定时器.html" />
+    <link rel="prev" href="PythonMachineLearn.html" />
     
 
     
@@ -260,7 +258,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.7" data-path="TPYBoard v202 舵机的基本介绍.html">
+        <li class="chapter " data-level="1.2.7" data-path="TPYBoard v202 舵机的基本介绍.html">
             
                 <a href="TPYBoard v202 舵机的基本介绍.html">
             
@@ -628,7 +626,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="ipythonmagic.html">
+        <li class="chapter active" data-level="1.9" data-path="ipythonmagic.html">
             
                 <a href="ipythonmagic.html">
             
@@ -671,7 +669,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >TPYBoard v202 舵机的基本介绍</a>
+        <a href="." >IpythonMagic</a>
     </h1>
 </div>
 
@@ -686,61 +684,134 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#7tpyboard-v202-&#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><b></b>7.TPYBoard v202 &#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;"><b></b>&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;</a></li></ul></ul></div><a href="#7tpyboard-v202-&#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="7tpyboard-v202-&#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><a name="7tpyboard-v202-&#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#7tpyboard-v202-&#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>7.TPYBoard v202 &#x8235;&#x673A;&#x7684;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h1>
-<ul>
-<li><p>&#x8235;&#x673A;&#x7684;&#x7EC4;&#x6210;&#x4E0E;&#x53C2;&#x6570;</p>
-<p>&#x8235;&#x673A;&#xFF0C;&#x53C8;&#x79F0;&#x4F3A;&#x670D;&#x9A6C;&#x8FBE;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5177;&#x6709;&#x95ED;&#x73AF;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x7684;&#x673A;&#x7535;&#x7ED3;&#x6784;&#x3002;&#x8235;&#x673A;&#x4E3B;&#x8981;&#x662F;&#x7531;&#x5916;&#x58F3;&#x3001;&#x7535;&#x8DEF;&#x677F;&#x3001;&#x65E0;&#x6838;&#x5FC3;&#x9A6C;&#x8FBE;&#x3001;&#x9F7F;&#x8F6E;&#x4E0E;&#x4F4D;&#x7F6E;&#x68C0;&#x6D4B;&#x5668;&#x6240;&#x6784;&#x6210;&#x3002; &#x5176;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;&#x7531;&#x63A7;&#x5236;&#x5668;&#x53D1;&#x51FA;PWM&#xFF08;&#x8109;&#x51B2;&#x5BBD;&#x5EA6;&#x8C03;&#x5236;&#xFF09;&#x4FE1;&#x53F7;&#x7ED9;&#x8235;&#x673A;&#xFF0C;&#x7ECF;&#x7535;&#x8DEF;&#x677F;&#x4E0A;&#x7684;IC&#x5904;&#x7406;&#x540E;&#x8BA1;&#x7B97;&#x51FA;&#x8F6C;&#x52A8;&#x65B9;&#x5411;&#xFF0C;&#x518D;&#x9A71;&#x52A8;&#x65E0;&#x6838;&#x5FC3;&#x9A6C;&#x8FBE;&#x8F6C;&#x52A8;&#xFF0C; &#x900F;&#x8FC7;&#x51CF;&#x901F;&#x9F7F;&#x8F6E;&#x5C06;&#x52A8;&#x529B;&#x4F20;&#x81F3;&#x6446;&#x81C2;&#xFF0C;&#x540C;&#x65F6;&#x7531;&#x4F4D;&#x7F6E;&#x68C0;&#x6D4B;&#x5668;&#xFF08;&#x7535;&#x4F4D;&#x5668;&#xFF09;&#x8FD4;&#x56DE;&#x4F4D;&#x7F6E;&#x4FE1;&#x53F7;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5230;&#x8FBE;&#x8BBE;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E00;&#x822C;&#x8235;&#x673A;&#x53EA;&#x80FD;&#x65CB;&#x8F6C;180&#x5EA6;&#x3002;</p>
-</li>
-<li><p><img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200912120455020.png" alt="image-20200912120455020"></p>
-</li>
-<li><p>&#x8235;&#x673A;&#x7684;&#x63A5;&#x7EBF;</p>
-<p>&#x8235;&#x673A;&#x6709;3&#x6839;&#x7EBF;&#xFF0C;&#x68D5;&#x8272;&#x4E3A;&#x5730;&#xFF0C;&#x7EA2;&#x8272;&#x4E3A;&#x7535;&#x6E90;&#x6B63;&#xFF0C;&#x6A59;&#x8272;&#x4E3A;&#x4FE1;&#x53F7;&#x7EBF;&#xFF0C;&#x4F46;&#x4E0D;&#x540C;&#x724C;&#x5B50;&#x7684;&#x8235;&#x673A;&#xFF0C;&#x7EBF;&#x7684;&#x989C;&#x8272;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#x3002;</p>
-</li>
-<li><p>&#x8235;&#x673A;&#x7684;&#x63A7;&#x5236;&#x539F;&#x7406;</p>
-<p>&#x8235;&#x673A;&#x7684;&#x8F6C;&#x52A8;&#x7684;&#x89D2;&#x5EA6;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x8282;PWM&#xFF08;&#x8109;&#x51B2;&#x5BBD;&#x5EA6;&#x8C03;&#x5236;&#xFF09;&#x4FE1;&#x53F7;&#x7684;&#x5360;&#x7A7A;&#x6BD4;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
-<p>&#x5360;&#x7A7A;&#x6BD4;&#xFF1A;</p>
-<p><code>1</code>.&#x6307;&#x9AD8;&#x7535;&#x5E73;&#x5728;&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x4E4B;&#x5185;&#x6240;&#x5360;&#x7684;&#x65F6;&#x95F4;&#x6BD4;&#x7387;&#x3002;</p>
-<p><code>2</code>.&#x6B63;&#x8109;&#x51B2;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E0E;&#x8109;&#x51B2;&#x603B;&#x5468;&#x671F;&#x7684;&#x6BD4;&#x503C;&#x3002;&#x4F8B;&#x5982;:&#x6B63;&#x8109;&#x51B2;&#x5BBD;&#x5EA6;1&#x3BC;s,&#x4FE1;&#x53F7;&#x5468;&#x671F;10&#x3BC;s&#x7684;&#x8109;&#x51B2;&#x5E8F;&#x5217;&#x5360;&#x7A7A;&#x6BD4;&#x4E3A;0.1&#x3002;&#x5373;&#xFF1A;&#x8109;&#x51B2;&#x7684;&#x5BBD;&#x5EA6;&#x9664;&#x4EE5;&#x8109;&#x51B2;&#x7684;&#x5468;&#x671F;&#x79F0;&#x4E3A;&#x5360;&#x7A7A;&#x6BD4;&#x3002;&#x6807;&#x51C6;PWM&#xFF08;&#x8109;&#x51B2;&#x5BBD;&#x5EA6;&#x8C03;&#x5236;&#xFF09;&#x4FE1;&#x53F7;&#x7684;&#x5468;&#x671F;&#x56FA;&#x5B9A;&#x4E3A;20ms&#xFF08;50Hz&#xFF09;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x8109;&#x5BBD;&#x5206;&#x5E03;&#x5E94;&#x5728;1ms&#x5230;2ms&#x4E4B;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#x8109;&#x5BBD;&#x53EF;&#x7531;0.5ms&#x5230;2.5ms&#x4E4B;&#x95F4;&#xFF0C;&#x8109;&#x5BBD;&#x548C;&#x8235;&#x673A;&#x7684;&#x8F6C;&#x89D2;0&#xB0;&#xFF5E;180&#xB0;&#x76F8;&#x5BF9;&#x5E94;&#x3002;</p>
-</li>
-</ul>
-<h2 id="&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;"><a name="&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x786C;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;</h2>
-<ul>
-<li><p>&#x793A;&#x610F;&#x56FE;</p>
-<ul>
-<li>| TPYBoard V202 | SG90&#x8235;&#x673A;     |
-| ------------- | ------------ |
-| +5V           | &#x6B63;&#x6781;(&#x7EA2;&#x8272;&#x7EBF;) |
-| GND           | &#x8D1F;&#x6781;(&#x68D5;&#x8272;&#x7EBF;) |
-| G5            | &#x4FE1;&#x53F7;(&#x6A59;&#x8272;&#x7EBF;) |</li>
-</ul>
-</li>
-<li><p>&#x5B9E;&#x7269;&#x56FE;</p>
-</li>
-<li><p><img src="https://gitee.com/zr001/writeimges/raw/master/images/image-20200912125301215.png" alt="image-20200912125301215"></p>
-</li>
-<li><p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
-<p>&#x6E29;&#x99A8;&#x63D0;&#x793A;:<code>TPYBoard v202</code>&#x5F00;&#x53D1;&#x677F;&#x4E0A;&#x7684;&#x5F15;&#x811A;<code>G9</code>&#x3001;<code>G10</code>&#x3001;<code>G16</code> &#x4E0D;&#x652F;&#x6301;PWM&#x529F;&#x80FD;&#x3002;</p>
-<p><code>main.py</code>&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> machine
-<span class="hljs-keyword">import</span> time
-
-<span class="hljs-comment">#&#x8BBE;&#x7F6E;PWM &#x5F15;&#x811A;G5,&#x9891;&#x7387;50Hz</span>
-servo = machine.PWM(machine.Pin(<span class="hljs-number">5</span>), freq=<span class="hljs-number">50</span>)
-
-servo.duty(<span class="hljs-number">40</span>)    <span class="hljs-comment"># &#x8235;&#x673A;&#x89D2;&#x5EA6;&#x7684;&#x8BBE;&#x5B9A;</span>
-time.sleep(<span class="hljs-number">2</span>)    <span class="hljs-comment"># &#x5EF6;&#x65F6;2&#x79D2;&#xFF1B;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x89D2;&#x5EA6;</span>
-servo.duty(<span class="hljs-number">115</span>)    <span class="hljs-comment"># &#x8F6C;&#x8FC7;&#x76F8;&#x540C;&#x5DEE;&#x503C;&#x7684;&#x89D2;&#x5EA6;&#xFF08;75&#xB0;&#xFF09;115&#xB0;-40&#xB0;=180&#xB0;-115&#xB0;</span>
-time.sleep(<span class="hljs-number">2</span>)    <span class="hljs-comment"># &#x5EF6;&#x65F6;2&#x79D2;&#xFF1B;&#x8F6C;&#x56DE;&#x539F;&#x6765;&#x7684;&#x89D2;&#x5EA6;</span>
-servo.duty(<span class="hljs-number">180</span>)
-</code></pre>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;"><b></b>Ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;</a></li></ul></div><a href="#ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;"><a name="ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>Ipython&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;</h1>
+<p><strong>IPython</strong>&#x4E2D;&#x7684;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;&#x6709;&#x5F88;&#x591A;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;<strong>IPython</strong>&#xFF0C;&#x540C;&#x65F6;&#x8FD9;&#x9B54;&#x6CD5;&#x547D;&#x4EE4;&#x4E5F;&#x80FD;&#x5728;<code>JupyterNotebook</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x8005;&#x662F;&#x4EE5;&#x524D;&#x8005;&#x4E3A;&#x5185;&#x6838;&#x7684;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%quickref</td>
+<td>&#x5FEB;&#x901F;&#x5BFC;&#x5F15;</td>
+</tr>
+<tr>
+<td>%magic</td>
+<td>Magic Functions &#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</td>
+</tr>
+<tr>
+<td>%fun?</td>
+<td>&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x5E2E;&#x52A9;</td>
+</tr>
+<tr>
+<td>%lsmagic</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x2F64;&#x7528; Magic Functions</td>
+</tr>
+<tr>
+<td>obj?, obj??</td>
+<td>&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x4FE1;&#x606F;&#xFF0C;?? &#x8FD4;&#x56DE;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x2F50;&#x6BD4;&#x5982;&#x6E90;&#x7801;</td>
+</tr>
+<tr>
+<td>?obj.<em>abc</em></td>
+<td>&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x5339;&#x914D;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x2F50;&#x6BD4;&#x5982;: str.is*</td>
+</tr>
+<tr>
+<td>!, !!</td>
+<td>&#x6267;&#x2F8F;&#x884C;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;&#xFF0C;&#x6355;&#x83B7;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>%doctest_mode</td>
+<td>&#x5207;&#x6362; shell &#x63D0;&#x793A;&#x793A;&#x6837;&#x5F0F;&#xFF0C;&#x5305;&#x62EC;&#x63D0;&#x793A;&#x793A;&#x7B26;&#x3001;&#x8F93;&#x51FA;&#x7B49;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td>%pprint</td>
+<td>Pretty-Print &#x5F00;&#x5173;</td>
+</tr>
+<tr>
+<td>%bookmark</td>
+<td>&#x76EE;&#x5F55;&#x4E66;&#x7B7E;</td>
+</tr>
+<tr>
+<td>%cd, %pwd, _dh</td>
+<td>&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>%dirs, %popd, %pushd</td>
+<td>&#x76EE;&#x5F55;&#x6808;</td>
+</tr>
+<tr>
+<td>%ed, %edit</td>
+<td>&#x4F7F;&#x7528;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>%debug</td>
+<td>&#x8FDB;&#x5165;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x5F02;&#x5E38;&#x573A;&#x666F;&#xFF0C;<a href="http://pdb.pm/" target="_blank">pdb.pm</a>()</td>
+</tr>
+<tr>
+<td>%pdb</td>
+<td>pdb&#x5F00;&#x5173;&#xFF0C;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x65F6;&#x662F;&#x5426;&#x8FDB;&#x5165;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>%pdoc</td>
+<td>&#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x6587;&#x6863;</td>
+</tr>
+<tr>
+<td>%psource</td>
+<td>&#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x6E90;&#x7801;</td>
+</tr>
+<tr>
+<td>%pyfile</td>
+<td>&#x67E5;&#x770B;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>%pycat</td>
+<td>&#x6309;&#x9875;&#x67E5;&#x770B;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>%run</td>
+<td>&#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>%prun, %time, %timeit</td>
+<td>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>%psearch</td>
+<td>&#x5728;&#x5F53;&#x524D;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x6309;&#x901A;&#x914D;&#x7B26;&#x641C;&#x7D22;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>%who,%whos</td>
+<td>&#x67E5;&#x770B;&#x6240;&#x6709;&#x53D8;&#x91CF;</td>
+</tr>
+<tr>
+<td>%env</td>
+<td>&#x8F93;&#x51FA;&#x73AF;&#x5883;&#x53D8;&#x91CF;</td>
+</tr>
+<tr>
+<td>%hist</td>
+<td>&#x67E5;&#x770B;&#x5386;&#x53F2;&#x53D8;&#x91CF;</td>
+</tr>
+<tr>
+<td>%reset</td>
+<td>&#x91CD;&#x7F6E;&#x73AF;&#x5883;&#xFF0C;&#x79FB;&#x9664;&#x6240;&#x6709;&#x540D;&#x5B57;</td>
+</tr>
+</tbody>
+</table>
+<p><code>&#x5907;&#x6CE8;</code>&#xFF1A;</p>
 <blockquote>
-<p> freq:1-1000   &#x8109;&#x5BBD;&#x5BF9;&#x5E94;&#x8235;&#x673A;&#x89D2;&#x5EA6;<code>0&#xB0;- 180&#xB0;</code></p>
-<p> duty:0-1023    </p>
-</blockquote>
-</li>
+<ul>
+<li>%%&#x8868;&#x793A;&#x591A;&#x884C;&#x6A21;&#x5F0F;&#xFF0C;%&#x4EC5;&#x6307;&#x5355;&#x884C;&#x6A21;&#x5F0F;&#xFF1B;</li>
+<li>&#x5728; shell command &#x4E2D;&#x53EF;&#x4EE5;&#x7528; $ name &#x5F15;&#x7528; Python &#x53D8;&#x91CF;&#x540D;&#x5B57;&#xFF0C;$$name &#x5F15;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1B;</li>
+<li>&#x7CFB;&#x7EDF;&#x547D;&#x540D;&#x6355;&#x83B7;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x7ED9;&#x67D0;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x5982; name = !unam&#xFF1B;</li>
+<li>%ed: -n &#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x884C;&#xFF1B;-x &#x9000;&#x51FA;&#x7F16;&#x8F91;&#x5668;&#x65F6;&#x4E0D;&#x6267;&#x884C;&#xFF1B;-p &#x4F7F;&#x2F64;&#x7528;&#x4E0A;&#x4E00;&#x6B21; <code>ed</code> &#x547D;&#x4EE4;&#xFF1B;</li>
+<li>%run: -n &#x8BBE;&#x5B9A; <strong>name</strong> &#x4E3A;&#x2FAE;&#x975E; &#x201C;<strong>main</strong>&#x201D;&#xFF1B;-i &#x5F15;&#x2F0A;&#x5165;&#x4EA4;&#x4E92;&#x73AF;&#x5883;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#xFF1B;-d &#x8FDB;&#x2F0A;&#x5165;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x3002; </li>
 </ul>
+</blockquote>
 <p><footer class="page-footer"><span class="copyright">&#xA9; by Winnerzr all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x6863;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-11-09 22:06:58
+2020-11-10 17:37:39
 </span></footer></p>
 <div id="gitalk-container"></div>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
@@ -770,14 +841,10 @@ servo.duty(<span class="hljs-number">180</span>)
 
             
                 
-                <a href="TPYBoard v202 定时器.html" class="navigation navigation-prev " aria-label="Previous page: TPYBoard v202 定时器">
+                <a href="PythonMachineLearn.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: PythonMachineLearn">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="TPYBoard v202 I2C操作DS3231时钟模块.html" class="navigation navigation-next " aria-label="Next page: TPYBoard v202 I2C操作DS3231时钟模块">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -786,7 +853,7 @@ servo.duty(<span class="hljs-number">180</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TPYBoard v202 舵机的基本介绍","level":"1.2.7","depth":2,"next":{"title":"TPYBoard v202 I2C操作DS3231时钟模块","level":"1.2.8","depth":2,"path":"TPYBoard v202 I2C操作DS3231时钟模块.md","ref":"TPYBoard v202 I2C操作DS3231时钟模块.md","articles":[]},"previous":{"title":"TPYBoard v202 定时器","level":"1.2.6","depth":2,"path":"TPYBoard v202 定时器.md","ref":"TPYBoard v202 定时器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code","hide-element","insert-logo","-lunr","-search","search-pro","pageview-count","popup","-sharing","sharing-plus","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["qq","qzone","weibo"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":false,"qzone":true},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://gitee.com/zr001/writeimges/raw/master/img/book_38.461538461538px_1287379_easyicon.net.png"},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"TPYBoard v202 舵机的基本介绍.md","mtime":"2020-11-09T14:06:58.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-10T13:45:54.058Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"IpythonMagic","level":"1.9","depth":1,"previous":{"title":"PythonMachineLearn","level":"1.8","depth":1,"path":"PythonMachineLearn.md","ref":"PythonMachineLearn.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","tbfed-pagefooter","expandable-chapters-small","github","github-buttons","anchor-navigation-ex","edit-link","splitter","favicon","mygitalk","code","hide-element","insert-logo","-lunr","-search","search-pro","pageview-count","popup","-sharing","sharing-plus","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy by Winnerzr","modify_label":"该文档修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/WINNERZR01"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif","alipayText":"支付宝","button":"Donate","title":"","wechat":"https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WINNERZR01","repo":"pythonnote","type":"star","size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"614d54820d41237c9a62","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["WINNERZR01"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-issues-save","owner":"WINNERZR01","enableHotKey":true,"clientSecret":"3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["qq","qzone","weibo"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":false,"qzone":true},"edit-link":{"label":"","base":"https://github.com/WINNERZR01/pythonnote/blob/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 32px; min-height: 32px","url":"https://gitee.com/zr001/writeimges/raw/master/img/book_38.461538461538px_1287379_easyicon.net.png"},"expandable-chapters":{}},"theme":"default","author":"Winnerzr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的python笔记本","language":"zh-hans","gitbook":"*","description":"Winnerzr's python notebook"},"file":{"path":"ipythonmagic.md","mtime":"2020-11-10T09:37:39.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-10T13:45:54.058Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
