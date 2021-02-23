@@ -36,4 +36,6 @@
 - [PythonArduino](PythonArduino.md)
 - [PythonConda](conda.md)
 - [PythonMachineLearn](PythonMachineLearn.md)
+  - [Python数据分析](Python数据分析.md)
 - [IpythonMagic](ipythonmagic.md)
+
