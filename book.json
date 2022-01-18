@@ -14,7 +14,6 @@
         "edit-link",
         "splitter",
         "favicon",
-        "mygitalk",
         "code",
         "hide-element",
         "insert-logo",
@@ -29,8 +28,8 @@
     ],
     "pluginsConfig": {
         "donate": {
-            "wechat": "https://gitee.com/zr001/writeimges/raw/master/img/wechat.gif",
-            "alipay": "https://gitee.com/zr001/my-picture-bed/raw/master/alipay.gif",
+            "wechat": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201181823748.png",
+            "alipay": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201181823839.png",
             "title": "",
             "button": "Donate",
             "alipayText": "支付宝",
@@ -64,14 +63,6 @@
                 "180x180": "assets/images/favicon.ico"
             }
         },
-        "mygitalk": {
-            "clientID": "614d54820d41237c9a62",
-            "clientSecret": "3de2c6bb85ff4498bcf5e683ebc95919f7c4cff9",
-            "repo": "gitbook-issues-save",
-            "owner": "WINNERZR01",
-            "admin": ["WINNERZR01"],
-            "distractionFreeMode": false
-        },
         "github-buttons": {
             "buttons": [{
               "user": "WINNERZR01",
@@ -84,7 +75,7 @@
             "elements": [".gitbook-link"]
         },
         "insert-logo": {
-            "url": "https://gitee.com/zr001/writeimges/raw/master/img/notebookicon64.png",
+            "url": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201182200702.png",
             "style": "background: none; max-height: 64px; min-height: 64px"
         },
         "sharing": {
@@ -99,5 +90,9 @@
          "all": [
             "qq", "qzone","weibo"              
             ]
+      },
+      "valine": {
+        "appId": "Pmai2zSyIldhmWIcUD2yFIcp-gzGzoHsz",
+        "appKey": "TuPQ3Y38BG6lBdwDvl2cmMmb"
       }
 }}
