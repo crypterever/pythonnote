@@ -1,22 +1,18 @@
 {
     "root": ".",
-    "title": "我的python笔记本",
+    "title": "我的Python笔记本",
     "author": "Winnerzr",
-    "description": "Winnerzr's python notebook",
+    "description": "Winnerzr's Python notebook",
     "language": "zh-hans",
     "plugins": [
         "donate",
         "tbfed-pagefooter",
         "expandable-chapters-small",
         "github",
-        "github-buttons",
         "anchor-navigation-ex",
-        "edit-link",
         "splitter",
-        "favicon",
         "code",
         "hide-element",
-        "insert-logo",
         "-lunr", 
         "-search", 
         "search-pro",
@@ -24,7 +20,7 @@
         "popup",
         "-sharing",
         "sharing-plus",
-        "popup"
+        "valine"
     ],
     "pluginsConfig": {
         "donate": {
@@ -36,7 +32,7 @@
             "wechatText": "微信"
         },
         "tbfed-pagefooter": {
-            "copyright":"&copy by Winnerzr",
+            "copyright":"&copy by winnerzr",
             "modify_label": "该文档修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -47,48 +43,23 @@
         "anchor-navigation-ex":{
             "showLevel": false
         },
-        "edit-link": {
-            "base": "https://github.com/WINNERZR01/pythonnote/blob/main",
-            "label": ""
-        },
         "code": {
             "copyButtons": true
-        },
-        "favicon": {
-            "shortcut": "assets/images/favicon.ico",
-            "bookmark": "assets/images/favicon.ico",
-            "appleTouch": "assets/images/favicon.ico",
-            "appleTouchMore": {
-                "120x120": "assets/images/favicon.ico",
-                "180x180": "assets/images/favicon.ico"
-            }
-        },
-        "github-buttons": {
-            "buttons": [{
-              "user": "WINNERZR01",
-              "repo": "pythonnote",
-              "type": "star",
-              "size": "small"
-            }]
         },
         "hide-element": {
             "elements": [".gitbook-link"]
         },
-        "insert-logo": {
-            "url": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201182200702.png",
-            "style": "background: none; max-height: 64px; min-height: 64px"
-        },
         "sharing": {
-            "douban": false,
+            "douban": true,
             "facebook": false,
             "google": false,
             "pocket": false,
             "qq": true,
-            "qzone": true,
-            "twitter": false,
+            "qzone": false,
+            "twitter": true,
             "weibo": true,
          "all": [
-            "qq", "qzone","weibo"              
+            "qq", "twitter","weibo","douban"              
             ]
       },
       "valine": {
