@@ -9,7 +9,6 @@
         "tbfed-pagefooter",
         "expandable-chapters-small",
         "github",
-        "anchor-navigation-ex",
         "splitter",
         "code",
         "hide-element",
@@ -20,12 +19,13 @@
         "popup",
         "-sharing",
         "sharing-plus",
-        "valine"
+        "valine",
+        "page-toc-button" 
     ],
     "pluginsConfig": {
         "donate": {
-            "wechat": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201181823748.png",
-            "alipay": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/202201181823839.png",
+            "wechat": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/WeChatQR.png",
+            "alipay": "https://cdn.jsdelivr.net/gh/WINNERZR01/WINNERZR01-2022picturebed/writeimg/AliPayQR.png",
             "title": "",
             "button": "Donate",
             "alipayText": "支付宝",
@@ -40,9 +40,6 @@
             "url": "https://github.com/WINNERZR01"
         },  
         "expandable-chapters":{},
-        "anchor-navigation-ex":{
-            "showLevel": false
-        },
         "code": {
             "copyButtons": true
         },
@@ -65,5 +62,9 @@
       "valine": {
         "appId": "Pmai2zSyIldhmWIcUD2yFIcp-gzGzoHsz",
         "appKey": "TuPQ3Y38BG6lBdwDvl2cmMmb"
-      }
+      },
+      "page-toc-button": {
+        "maxTocDepth": 2,
+        "minTocSize": 2
+       }
 }}
