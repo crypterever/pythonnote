@@ -20,7 +20,8 @@
         "-sharing",
         "sharing-plus",
         "valine",
-        "page-toc-button" 
+        "page-toc-button",
+        "back-to-top-button" 
     ],
     "pluginsConfig": {
         "donate": {
